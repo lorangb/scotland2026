@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIST Golf Scotland 2026 Championship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --purple: #2D1B4E;
+  --purple-light: #4A2D7A;
+  --green: #2B5E3B;
+  --green-light: #3D8A54;
+  --gold: #C9A84C;
+  --gold-light: #E8D48B;
+  --cream: #F5F0E8;
+  --navy: #1A1A2E;
+  --sky: #87CEEB;
+  --dark: #0D0D1A;
+  --card: #1E1E38;
+  --card-hover: #252548;
+  --text: #E8E4DC;
+  --text-muted: #9894A8;
+  --danger: #E74C3C;
+  --success: #2ECC71;
+  --orange: #E67E22;
+  --border: rgba(201,168,76,0.15);
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--purple) 50%, var(--navy) 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path d="M0 500 Q300 400 600 500 T1200 500 V800 H0Z" fill="%232B5E3B" opacity="0.05"/><path d="M0 600 Q400 500 800 600 T1200 600 V800 H0Z" fill="%23C9A84C" opacity="0.03"/></svg>') bottom/cover no-repeat;
+}
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float 6s infinite;
+}
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+}
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 0.7; box-shadow: 0 0 0 0 rgba(201,168,76,0.2); }
+  50% { opacity: 1; box-shadow: 0 0 20px 5px rgba(201,168,76,0.3); }
+}
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), #F5E6A3, var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.hero h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  font-weight: 400;
+  color: var(--cream);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.hero-meta i { color: var(--gold); margin-right: 0.4rem; }
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, var(--gold), #B8942E);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.4); }
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  color: var(--gold);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Nav */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,13,26,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  list-style: none;
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 0;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+nav a:hover, nav a.active { color: var(--gold); background: rgba(201,168,76,0.1); }
+nav a i { font-size: 0.75rem; }
+
+/* Sections */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.section-header p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1rem auto;
+}
+
+/* Live Status Bar */
+.live-bar {
+  background: linear-gradient(135deg, var(--purple), var(--navy));
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.live-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.live-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #2ECC71;
+  animation: pulse 2s ease-in-out infinite;
+}
+.live-bar h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.live-bar .status-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Leaderboard */
+.leaderboard-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+.leaderboard thead th {
+  background: rgba(45,27,78,0.6);
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+.leaderboard tbody tr {
+  transition: all 0.3s;
+  border-bottom: 1px solid rgba(201,168,76,0.05);
+}
+.leaderboard tbody tr:hover { background: var(--card-hover); }
+.leaderboard td { padding: 0.9rem 1rem; }
+.leaderboard .rank {
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 40px;
+  text-align: center;
+}
+.rank-gold { color: var(--gold); }
+.rank-silver { color: #A8A8A8; }
+.rank-bronze { color: #CD7F32; }
+.leaderboard .player-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.leaderboard .player-name .initials {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple-light), var(--purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.leaderboard .handicap-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(43,94,59,0.3);
+  color: var(--green-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+.leaderboard .skins-num {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.leaderboard .bonus-num {
+  color: var(--gold);
+  font-weight: 600;
+}
+.leaderboard .total-num {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--cream);
+}
+.leaderboard .note-cell {
+  font-size: 0.75rem;
+  color: var(--gold);
+  max-width: 180px;
+}
+.leaderboard .pos-change {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+}
+.pos-up { color: var(--success); }
+.pos-same { color: var(--text-muted); }
+
+/* Tables */
+.data-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+.data-table thead th {
+  background: rgba(45,27,78,0.6);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+.data-table tbody tr {
+  transition: all 0.2s;
+  border-bottom: 1px solid rgba(201,168,76,0.05);
+}
+.data-table tbody tr:hover { background: var(--card-hover); }
+.data-table td { padding: 0.8rem 1rem; font-size: 0.9rem; }
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(201,168,76,0.3); box-shadow: var(--shadow); }
+.card-image {
+  height: 160px;
+  background: linear-gradient(135deg, var(--purple), var(--navy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.card-image .card-icon {
+  font-size: 3rem;
+  opacity: 0.3;
+}
+.card-image .card-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.label-golf { background: var(--green); color: white; }
+.label-travel { background: var(--purple-light); color: white; }
+.label-today { background: var(--gold); color: var(--dark); }
+.card-body { padding: 1.5rem; }
+.card-body h3 { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold); margin-bottom: 0.5rem; }
+.card-body .subtitle { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+.card-body p { font-size: 0.85rem; line-height: 1.6; color: var(--text); opacity: 0.85; }
+.card-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.card-meta span { font-size: 0.75rem; color: var(--text-muted); }
+.card-meta i { color: var(--gold); width: 16px; margin-right: 0.3rem; }
+.card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.15);
+}
+.card-footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.card-footer a:hover { color: var(--gold-light); }
+.card-footer a i { margin-right: 0.4rem; }
+
+/* Player Card */
+.player-card .card-image {
+  height: 100px;
+  background: linear-gradient(135deg, var(--purple), #3D2A6E);
+}
+.player-card .initials-large {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--gold);
+  position: absolute;
+  bottom: -30px;
+  left: 1.5rem;
+}
+.player-card .card-body { padding-top: 2rem; }
+.player-stats {
+  display: flex;
+  gap: 0.8rem;
+  margin: 0.8rem 0;
+  flex-wrap: wrap;
+}
+.player-stats .stat {
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  font-size: 0.78rem;
+}
+.player-stats .stat strong { color: var(--gold); }
+
+/* Schedule Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--purple));
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 2rem 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 2px solid var(--gold);
+}
+.timeline-item.today::before {
+  background: var(--gold);
+  box-shadow: 0 0 15px rgba(201,168,76,0.5);
+}
+.timeline-item h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.timeline-item .tl-date { font-size: 0.8rem; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
+.timeline-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+.timeline-item .tl-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+/* Rules Section */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.rule-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: all 0.2s;
+}
+.rule-card:hover { border-color: rgba(201,168,76,0.3); }
+.rule-card .rule-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: rgba(201,168,76,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.rule-card h4 { font-size: 0.9rem; color: var(--text); margin-bottom: 0.3rem; }
+.rule-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Weather Widget */
+.weather-widget {
+  background: linear-gradient(135deg, #1a1a3e, #2d1b4e);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.weather-icon-temp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.weather-icon-temp i { font-size: 2.5rem; color: var(--sky); }
+.weather-icon-temp .temp {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--cream);
+}
+.weather-icon-temp .unit { font-size: 1rem; color: var(--text-muted); }
+.weather-details { flex: 1; min-width: 150px; }
+.weather-details .condition { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.weather-details .extra { font-size: 0.8rem; color: var(--text-muted); }
+.weather-details .extra i { color: var(--gold); width: 18px; margin-right: 0.3rem; }
+.weather-updated { font-size: 0.7rem; color: var(--text-muted); text-align: right; }
+
+/* Pubs */
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  transition: all 0.2s;
+}
+.pub-card:hover { border-color: rgba(201,168,76,0.3); }
+.pub-icon {
+  font-size: 1.5rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,168,76,0.1);
+  border-radius: 8px;
+}
+.pub-card h4 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.3rem; }
+.pub-card .pub-vibe { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+.pub-card .pub-specialty { font-size: 0.8rem; color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul { justify-content: flex-start; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 1rem; }
+  .section { padding: 3rem 1rem; }
+  .leaderboard td, .leaderboard th { padding: 0.6rem 0.5rem; font-size: 0.8rem; }
+  .weather-widget { flex-direction: column; align-items: flex-start; }
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.countdown-item {
+  text-align: center;
+}
+.countdown-item .num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+.countdown-item .label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Loading spinner */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+.loading i { font-size: 2rem; margin-bottom: 1rem; }
+
+/* Old course special section */
+.old-course-banner {
+  background: linear-gradient(135deg, var(--purple), #1a0a2e);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.old-course-banner i {
+  font-size: 2rem;
+  color: var(--gold);
+}
+.old-course-banner h4 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1rem; }
+.old-course-banner p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+/* Tab buttons */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.tab-btn:hover { border-color: var(--gold); color: var(--text); }
+.tab-btn.active {
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.tab-panel { display: none; animation: fadeIn 0.3s ease; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--purple-light); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+footer i { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-circle" style="color:#2ECC71;font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> LIVE — Round 4 Today</div>
+    <h1>LIST GOLF</h1>
+    <h2>Scotland 2026 Championship</h2>
+    <div class="hero-meta">
+      <span><i class="fas fa-calendar"></i> Jul 26 — Aug 1</span>
+      <span><i class="fas fa-map-pin"></i> St Andrews, Fife</span>
+      <span><i class="fas fa-users"></i> 11 Players</span>
+      <span><i class="fas fa-flag"></i> 6 Courses</span>
+    </div>
+    <a href="#leaderboard" class="hero-cta"><i class="fas fa-trophy"></i> View Live Leaderboard</a>
+  </div>
+  <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#leaderboard" class="active"><i class="fas fa-trophy"></i>Leaderboard</a></li>
+    <li><a href="#schedule"><i class="fas fa-calendar"></i>Schedule</a></li>
+    <li><a href="#players"><i class="fas fa-user"></i>Players</a></li>
+    <li><a href="#courses"><i class="fas fa-flag"></i>Courses</a></li>
+    <li><a href="#scoring"><i class="fas fa-chart-bar"></i>Scoring</a></li>
+    <li><a href="#rules"><i class="fas fa-book"></i>Rules</a></li>
+    <li><a href="#pubs"><i class="fas fa-beer-mug-empty"></i>Pubs</a></li>
+    <li><a href="#logistics"><i class="fas fa-truck"></i>Logistics</a></li>
+  </ul>
+</nav>
+
+<!-- Leaderboard Section -->
+<section class="section" id="leaderboard">
+  <div class="section-header">
+    <h2>Championship Leaderboard</h2>
+    <div class="section-divider"></div>
+    <p>Live standings after Round 3 (Lundin Links). Updated after every round.</p>
+  </div>
+
+  <div class="live-bar" id="liveBar">
+    <div class="live-bar-left">
+      <div class="live-dot"></div>
+      <div>
+        <h3>Round 4 — Crail Balcomie</h3>
+        <div class="status-text" id="statusText">Tee times 15:10 · Loading weather...</div>
+      </div>
+    </div>
+    <div>
+      <a href="#schedule" class="hero-cta" style="padding:0.5rem 1.2rem;font-size:0.75rem;"><i class="fas fa-calendar-day"></i> Today's Schedule</a>
+    </div>
+  </div>
+
+  <div class="weather-widget" id="weatherWidget">
+    <div class="loading"><i class="fas fa-spinner fa-spin"></i><br>Loading weather...</div>
+  </div>
+
+  <div class="leaderboard-wrapper">
+    <table class="leaderboard" id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th style="text-align:center;">HCP</th>
+          <th style="text-align:center;">Skins</th>
+          <th style="text-align:center;">Bonus</th>
+          <th style="text-align:center;">Total</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Old Course solo section -->
+  <div class="old-course-banner">
+    <i class="fas fa-crown"></i>
+    <div>
+      <h4>The Old Course Solo Challenge</h4>
+      <p>Players who secure a tee time at The Old Course (via Daily Lottery) earn <strong>+10 bonus points</strong> toward the championship. Adriaan completed his solo round Monday. Graham &amp; Ronny are playing today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule Section -->
+<section class="section" id="schedule">
+  <div class="section-header">
+    <h2>Week at a Glance</h2>
+    <div class="section-divider"></div>
+    <p>8 days of golf, travel, and St Andrews nightlife.</p>
+  </div>
+
+  <div class="timeline" id="timeline"></div>
+
+  <div style="margin-top: 2rem;">
+    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem;">Pairings by Round</h3>
+    <div class="tab-bar" id="pairingTabs"></div>
+    <div id="pairingPanels"></div>
+  </div>
+</section>
+
+<!-- Players Section -->
+<section class="section" id="players">
+  <div class="section-header">
+    <h2>The Contenders</h2>
+    <div class="section-divider"></div>
+    <p>Meet the 11 players competing for the 2026 LIST Golf Scotland Championship.</p>
+  </div>
+  <div class="cards-grid" id="playerGrid"></div>
+
+  <div style="margin-top: 3rem;">
+    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 1.1rem;">Alternates</h3>
+    <div class="data-table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Name</th><th>Hometown</th></tr></thead>
+        <tbody id="alternatesBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Courses Section -->
+<section class="section" id="courses">
+  <div class="section-header">
+    <h2>The Courses</h2>
+    <div class="section-divider"></div>
+    <p>Six courses across the Kingdom of Fife. From classic links to modern masterpieces.</p>
+  </div>
+  <div class="cards-grid" id="courseGrid"></div>
+</section>
+
+<!-- Scoring Section -->
+<section class="section" id="scoring">
+  <div class="section-header">
+    <h2>Scoring Breakdown</h2>
+    <div class="section-divider"></div>
+    <p>Detailed skins and bonus points by round.</p>
+  </div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 1.1rem;">Skins Overview</h3>
+  <div class="data-table-wrapper">
+    <table class="data-table" id="skinsTable">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th style="text-align:center;">R1</th>
+          <th style="text-align:center;">R2</th>
+          <th style="text-align:center;">R3</th>
+          <th style="text-align:center;">R4</th>
+          <th style="text-align:center;">R5</th>
+          <th style="text-align:center;">R6</th>
+          <th style="text-align:center;">Total</th>
+        </tr>
+      </thead>
+      <tbody id="skinsBody"></tbody>
+    </table>
+  </div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 1.1rem;">Bonus Points Breakdown</h3>
+  <div class="data-table-wrapper">
+    <table class="data-table" id="bonusTable">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th style="text-align:center;">R1</th>
+          <th style="text-align:center;">R2</th>
+          <th style="text-align:center;">R3</th>
+          <th style="text-align:center;">R4</th>
+          <th style="text-align:center;">R5</th>
+          <th style="text-align:center;">R6</th>
+          <th style="text-align:center;">Total</th>
+        </tr>
+      </thead>
+      <tbody id="bonusBody"></tbody>
+    </table>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:2rem;">
+    <div class="rule-card">
+      <div class="rule-icon"><i class="fas fa-gauge-high"></i></div>
+      <h4>Long Drive Holes</h4>
+      <p>Front 9: Longest Par 5 · Back 9: Longest Par 5</p>
+    </div>
+    <div class="rule-card">
+      <div class="rule-icon"><i class="fas fa-bullseye"></i></div>
+      <h4>Japan (Closest to Pin)</h4>
+      <p>Front 9: Shortest Par 3 · Back 9: Shortest Par 3</p>
+    </div>
+  </div>
+</section>
+
+<!-- Rules Section -->
+<section class="section" id="rules">
+  <div class="section-header">
+    <h2>Rules of LIST Golf</h2>
+    <div class="section-divider"></div>
+    <p>The official rules of the championship. Skins, presses, and bonus points.</p>
+  </div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 1.1rem;">Playing Formats</h3>
+  <div class="rules-grid" id="formatGrid"></div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin: 1.5rem 0 1rem; font-size: 1.1rem;">Skins Rules</h3>
+  <div class="rules-grid" id="skinsRulesGrid"></div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin: 1.5rem 0 1rem; font-size: 1.1rem;">Bonus Points (Post Round)</h3>
+  <div class="rules-grid" id="bonusRulesGrid"></div>
+
+  <div class="rule-card" style="margin-top: 1.5rem; border-color: rgba(201,168,76,0.3);">
+    <div class="rule-icon"><i class="fas fa-gavel"></i></div>
+    <h4>The Ken Rule</h4>
+    <p>If a teammate leaves during a team match, the remaining player may either continue solo (earning double skins) or convert the round to individual play.</p>
+  </div>
+</section>
+
+<!-- Pubs Section -->
+<section class="section" id="pubs">
+  <div class="section-header">
+    <h2>St Andrews Nightlife</h2>
+    <div class="section-divider"></div>
+    <p>Where to find the boys after the round. All walkable from the Airbnbs.</p>
+  </div>
+  <div class="cards-grid" id="pubsGrid"></div>
+</section>
+
+<!-- Logistics Section -->
+<section class="section" id="logistics">
+  <div class="section-header">
+    <h2>Logistics</h2>
+    <div class="section-divider"></div>
+    <p>Airbnb assignments, transport, and what to bring.</p>
+  </div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 1.1rem;">The Bases</h3>
+  <div class="cards-grid" id="airbnbGrid"></div>
+
+  <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin: 1.5rem 0 1rem; font-size: 1.1rem;">What to Bring</h3>
+  <div class="data-table-wrapper">
+    <table class="data-table">
+      <thead><tr><th style="width:40px;">#</th><th>Item</th></tr></thead>
+      <tbody id="bringBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p><i class="fas fa-golf-ball"></i> LIST Golf Scotland 2026 Championship</p>
+  <p style="margin-top:0.3rem;">Live from St Andrews, Fife · 11 Players · 6 Courses · 1 Champion</p>
+</footer>
+
+<script>
+const DATA = null; // loaded from data.json
+
+async function loadData() {
+  try {
+    const resp = await fetch('data.json');
+    return await resp.json();
+  } catch(e) {
+    console.error('Failed to load data:', e);
+    return null;
+  }
+}
+
+function getInitials(name) {
+  return name.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase();
+}
+
+function formatDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+}
+
+async function loadWeather() {
+  const w = document.getElementById('weatherWidget');
+  try {
+    // Open-Meteo free API - St Andrews coordinates
+    const resp = await fetch('https://api.open-meteo.com/v1/forecast?latitude=56.3398&longitude=-2.7967&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m&daily=temperature_2m_max,temperature_2m_min,weather_code&wind_speed_unit=mph&timezone=Europe/London');
+    const data = await resp.json();
+
+    const code = data.current.weather_code;
+    const conditions = {
+      0: 'Clear Sky', 1: 'Mainly Clear', 2: 'Partly Cloudy', 3: 'Overcast',
+      45: 'Foggy', 48: 'Foggy', 51: 'Light Drizzle', 53: 'Drizzle', 55: 'Heavy Drizzle',
+      61: 'Light Rain', 63: 'Rain', 65: 'Heavy Rain',
+      71: 'Light Snow', 73: 'Snow', 75: 'Heavy Snow',
+      80: 'Light Showers', 81: 'Showers', 82: 'Heavy Showers',
+      95: 'Thunderstorm', 96: 'Thunderstorm', 99: 'Severe Thunderstorm'
+    };
+
+    const icons = {
+      0: 'fa-sun', 1: 'fa-sun', 2: 'fa-cloud-sun', 3: 'fa-cloud',
+      45: 'fa-smog', 48: 'fa-smog',
+      51: 'fa-cloud-rain', 53: 'fa-cloud-rain', 55: 'fa-cloud-showers-heavy',
+      61: 'fa-cloud-rain', 63: 'fa-cloud-rain', 65: 'fa-cloud-showers-heavy',
+      71: 'fa-snowflake', 73: 'fa-snowflake', 75: 'fa-snowflake',
+      80: 'fa-cloud-sun-rain', 81: 'fa-cloud-sun-rain', 82: 'fa-cloud-showers-heavy',
+      95: 'fa-cloud-bolt', 96: 'fa-cloud-bolt', 99: 'fa-cloud-bolt'
+    };
+
+    const wcode = data.current.weather_code;
+    const condition = conditions[wcode] || 'Unknown';
+    const icon = icons[wcode] || 'fa-cloud';
+
+    const temp = Math.round(data.current.temperature_2m);
+    const feels = Math.round(data.current.apparent_temperature);
+    const humidity = data.current.relative_humidity_2m;
+    const wind = Math.round(data.current.wind_speed_10m);
+    const gusts = Math.round(data.current.wind_gusts_10m);
+
+    // Forecast
+    const fc = data.daily;
+    let forecastHtml = '';
+    if (fc && fc.time) {
+      forecastHtml = fc.time.slice(0,4).map((t,i) => {
+        const dt = new Date(t + 'T12:00:00');
+        const day = dt.toLocaleDateString('en-GB', { weekday: 'short' });
+        const fCode = fc.weather_code[i];
+        const fIcon = icons[fCode] || 'fa-cloud';
+        return `<span style="text-align:center;min-width:70px;">
+          <div style="font-size:0.65rem;color:var(--text-muted);">${day}</div>
+          <i class="fas ${fIcon}" style="color:var(--sky);font-size:0.9rem;margin:0.2rem 0;"></i>
+          <div style="font-size:0.75rem;font-weight:600;">${Math.round(fc.temperature_2m_max[i])}°</div>
+        </span>`;
+      }).join('');
+    }
+
+    w.innerHTML = `
+      <div class="weather-icon-temp">
+        <i class="fas ${icon}"></i>
+        <span class="temp">${temp}</span><span class="unit">°C</span>
+      </div>
+      <div class="weather-details">
+        <div class="condition">${condition} in St Andrews</div>
+        <div class="extra">
+          <i class="fas fa-temperature-low"></i> Feels like ${feels}°C
+          <i class="fas fa-droplet" style="margin-left:0.8rem;"></i> ${humidity}%
+          <i class="fas fa-wind" style="margin-left:0.8rem;"></i> ${wind} mph (gusts ${gusts} mph)
+        </div>
+        <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">${forecastHtml}</div>
+      </div>
+      <div class="weather-updated">
+        <i class="fas fa-clock"></i> Updated ${new Date(data.current.time).toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit'})}
+      </div>
+    `;
+
+    // Update status with wind
+    const st = document.getElementById('statusText');
+    if (st) {
+      st.textContent = `Tee times 15:10 · ${condition}, ${temp}°C, wind ${wind} mph`;
+    }
+  } catch(e) {
+    w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
+  }
+}
+
+function buildLeaderboard(d) {
+  const sorted = [...d.leaderboard].sort((a,b) => b.total - a.total);
+  const tbody = document.getElementById('leaderboardBody');
+  tbody.innerHTML = sorted.map((p, i) => {
+    const player = d.players.find(pl => pl.id === p.playerId);
+    if (!player) return '';
+    const rankClass = i === 0 ? 'rank-gold' : i === 1 ? 'rank-silver' : i === 2 ? 'rank-bronze' : '';
+    const medal = i === 0 ? '<i class="fas fa-crown" style="color:var(--gold);"></i>' : i+1;
+    const hcp = player.handicap ? `<span class="handicap-badge">${player.handicap}</span>` : '';
+    return `<tr>
+      <td class="rank ${rankClass}">${medal}</td>
+      <td class="player-name"><span class="initials">${getInitials(player.name)}</span>${player.name}${hcp}</td>
+      <td style="text-align:center;color:var(--text-muted);">${player.handicap || '—'}</td>
+      <td style="text-align:center;" class="skins-num">${p.skins}</td>
+      <td style="text-align:center;" class="bonus-num">+${p.bonus}</td>
+      <td style="text-align:center;" class="total-num">${p.total}</td>
+      <td class="note-cell">${p.note || ''}</td>
+    </tr>`;
+  }).join('');
+}
+
+function buildSchedule(d) {
+  const tl = document.getElementById('timeline');
+  tl.innerHTML = d.schedule.map((s, i) => {
+    const isToday = s.day.includes('July 29') || s.day.includes('Wednesday');
+    return `<div class="timeline-item ${isToday ? 'today' : ''}">
+      <div class="tl-date">${s.day}</div>
+      <h3>${s.event}</h3>
+      <p>${s.detail}</p>
+    </div>`;
+  }).join('');
+}
+
+function buildPairings(d) {
+  const tabs = document.getElementById('pairingTabs');
+  const panels = document.getElementById('pairingPanels');
+
+  tabs.innerHTML = d.pairings.map((p, i) =>
+    `<button class="tab-btn ${i === 3 ? 'active' : ''}" onclick="showPairing(${i})">${p.day}</button>`
+  ).join('');
+
+  panels.innerHTML = d.pairings.map((p, i) => {
+    const formatNote = p.format ? `<span style="font-size:0.8rem;color:var(--gold);margin-left:0.5rem;">${p.format}</span>` : '';
+    const groupsHtml = p.groups.map(g =>
+      `<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.8rem 1rem;">
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.3rem;">Group ${g.group}</div>
+        <div style="font-weight:600;">${g.players.join(' · ')}</div>
+      </div>`
+    ).join('');
+
+    return `<div class="tab-panel ${i === 3 ? 'active' : ''}" id="pairingPanel${i}">
+      <h4 style="color:var(--text);margin-bottom:0.5rem;">${p.course}${formatNote}</h4>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">${groupsHtml}</div>
+    </div>`;
+  }).join('');
+}
+
+function showPairing(idx) {
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i === idx));
+  document.querySelectorAll('#pairingPanels .tab-panel').forEach((p,i) => p.classList.toggle('active', i === idx));
+}
+
+function buildPlayers(d) {
+  const g = document.getElementById('playerGrid');
+  g.innerHTML = d.players.map(p => {
+    const hcp = p.handicap ? `<div class="stat"><strong>Handicap</strong> ${p.handicap}</div>` : '';
+    const ghin = p.ghin ? `<div class="stat"><strong>GHIN</strong> ${p.ghin}</div>` : '';
+    return `<div class="card player-card">
+      <div class="card-image">
+        <div class="card-icon"><i class="fas fa-user"></i></div>
+        <div class="initials-large">${getInitials(p.name)}</div>
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <div class="subtitle"><i class="fas fa-location-dot"></i> ${p.hometown}</div>
+        <div class="player-stats">
+          ${hcp}${ghin}
+          <div class="stat"><strong>Airbnb</strong> ${p.airbnb}</div>
+        </div>
+        <p>${p.bio}</p>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Alternates
+  document.getElementById('alternatesBody').innerHTML = d.alternates.map(a =>
+    `<tr><td>${a.name}</td><td>${a.hometown}</td></tr>`
+  ).join('');
+}
+
+function buildCourses(d) {
+  const g = document.getElementById('courseGrid');
+  g.innerHTML = d.courses.map(c => {
+    const isToday = c.day === 'Wednesday';
+    const label = isToday ? '<span class="card-label label-today"><i class="fas fa-flag"></i> Playing Today</span>'
+      : `<span class="card-label ${c.day === 'Sunday' || c.day === 'Monday' || c.day === 'Tuesday' ? 'label-golf' : 'label-golf'}">Rd ${d.courses.indexOf(c)+1}</span>`;
+
+    return `<div class="card">
+      <div class="card-image" style="background:linear-gradient(135deg,var(--purple),var(--green));">
+        <div class="card-icon"><i class="fas fa-flag"></i></div>
+        ${label}
+      </div>
+      <div class="card-body">
+        <h3>${c.name}</h3>
+        <div class="subtitle">${c.day} ${c.date} · Par ${c.par} · ${c.yards} yds</div>
+        <p>${c.description}</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> ${c.driveTime} drive</span>
+          <span><i class="fas fa-location-dot"></i> ${c.distance}</span>
+          <span><i class="fas fa-golf-flag-hole"></i> Tee ${c.teetimes}</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="${c.url}" target="_blank"><i class="fas fa-external-link"></i> Course Website</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function buildScoring(d) {
+  // Skins table
+  const skinsBody = document.getElementById('skinsBody');
+  skinsBody.innerHTML = d.skinsBreakdown.map(s => {
+    const p = d.players.find(pl => pl.id === s.playerId);
+    if (!p) return '';
+    const total = s.rounds.filter(r => r !== null).reduce((a,b) => a+b, 0);
+    return `<tr>
+      <td>${p.name}</td>
+      ${s.rounds.map(r => `<td style="text-align:center;">${r !== null ? r : '—'}</td>`).join('')}
+      <td style="text-align:center;font-weight:700;color:var(--gold);">${total}</td>
+    </tr>`;
+  }).join('');
+
+  // Bonus table
+  const bonusBody = document.getElementById('bonusBody');
+  bonusBody.innerHTML = d.bonusBreakdown.map(b => {
+    const p = d.players.find(pl => pl.id === b.playerId);
+    if (!p) return '';
+    const total = b.rounds.filter(r => r !== null).reduce((a,b) => a+b, 0);
+    return `<tr>
+      <td>${p.name}</td>
+      ${b.rounds.map(r => `<td style="text-align:center;">${r !== null ? r : '—'}</td>`).join('')}
+      <td style="text-align:center;font-weight:700;color:var(--gold);">${total}</td>
+    </tr>`;
+  }).join('');
+}
+
+function buildRules(d) {
+  // Formats
+  document.getElementById('formatGrid').innerHTML = d.formatRules.map(f =>
+    `<div class="rule-card">
+      <div class="rule-icon"><i class="fas fa-people-group"></i></div>
+      <h4>${f.format}</h4>
+      <p>${f.description}</p>
+    </div>`
+  ).join('');
+
+  // Skins rules
+  document.getElementById('skinsRulesGrid').innerHTML = d.scoringRules.map(r =>
+    `<div class="rule-card">
+      <div class="rule-icon"><i class="fas fa-coins"></i></div>
+      <p>${r.rule}</p>
+    </div>`
+  ).join('');
+
+  // Bonus rules
+  document.getElementById('bonusRulesGrid').innerHTML = d.bonusRules.map(b =>
+    `<div class="rule-card">
+      <div class="rule-icon"><i class="fas fa-star"></i></div>
+      <h4>${b.name} ${b.perNine ? '(×2)' : ''}</h4>
+      <p>${b.description} — <strong style="color:var(--gold);">${b.points} pt${b.points > 1 ? 's' : ''}</strong></p>
+    </div>`
+  ).join('');
+}
+
+function buildPubs(d) {
+  const g = document.getElementById('pubsGrid');
+  g.innerHTML = d.pubs.map(p =>
+    `<div class="pub-card">
+      <div class="pub-icon"><i class="fas ${p.name.includes('Gelat') ? 'fa-ice-cream' : p.name.includes('T-Squared') ? 'fa-dice' : p.name.includes('Vic') ? 'fa-moon' : 'fa-beer-mug-empty'}"></i></div>
+      <div>
+        <h4>${p.name}</h4>
+        <div class="pub-vibe"><i class="fas fa-quote-left" style="font-size:0.6rem;"></i> ${p.vibe}</div>
+        <div class="pub-specialty"><i class="fas fa-star"></i> ${p.specialty}</div>
+      </div>
+    </div>`
+  ).join('');
+}
+
+function buildLogistics(d) {
+  // Airbnbs
+  document.getElementById('airbnbGrid').innerHTML = d.airbnbs.map(a =>
+    `<div class="card">
+      <div class="card-image" style="height:100px;background:linear-gradient(135deg,var(--green),var(--navy));">
+        <div class="card-icon"><i class="fas fa-house-chimney"></i></div>
+      </div>
+      <div class="card-body">
+        <h3>${a.name}</h3>
+        <div class="subtitle"><i class="fas fa-location-dot"></i> ${a.address}</div>
+        <div class="player-stats">
+          <div class="stat"><strong>${a.bedrooms}</strong> BR</div>
+          <div class="stat"><strong>${a.bathrooms}</strong> BA</div>
+        </div>
+        <p style="font-size:0.85rem;"><strong style="color:var(--gold);">Occupants:</strong> ${a.occupants.join(', ')}</p>
+      </div>
+    </div>`
+  ).join('');
+
+  // What to bring
+  document.getElementById('bringBody').innerHTML = d.whatToBring.map((item, i) =>
+    `<tr><td>${i+1}</td><td>${item}</td></tr>`
+  ).join('');
+}
+
+// Particles
+function initParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDelay = Math.random() * 6 + 's';
+    p.style.animationDuration = (4 + Math.random() * 4) + 's';
+    p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
+    container.appendChild(p);
+  }
+}
+
+// Nav scroll highlight
+function initNav() {
+  const sections = document.querySelectorAll('.section[id]');
+  const links = document.querySelectorAll('nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+}
+
+// Main
+(async function() {
+  initParticles();
+  initNav();
+  const d = await loadData();
+  if (!d) {
+    document.body.innerHTML = '<div style="text-align:center;padding:4rem;color:var(--text-muted);"><i class="fas fa-exclamation-triangle" style="font-size:2rem;color:var(--gold);margin-bottom:1rem;"></i><p>Failed to load championship data.</p></div>';
+    return;
+  }
+
+  buildLeaderboard(d);
+  buildSchedule(d);
+  buildPairings(d);
+  buildPlayers(d);
+  buildCourses(d);
+  buildScoring(d);
+  buildRules(d);
+  buildPubs(d);
+  buildLogistics(d);
+  loadWeather();
+})();
+</script>
+</body>
+</html>
