@@ -7,28 +7,145 @@
     "status": "LIVE",
     "currentRound": 4,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-29T12:00:00+01:00"
+    "lastUpdated": "2026-07-29T18:00:00+01:00"
   },
   "players": [
-    {"id": "bart", "name": "Bart Lorang", "handicap": 14, "ghin": "12153941", "hometown": "Lyons, CO", "airbnb": "Airbnb #1", "bio": "Trip organizer and fearless leader. Daily Lottery competitor for The Old Course. Known for bringing the energy and the organisation that makes this trip possible.", "avatar": ""},
-    {"id": "sewell", "name": "Chris Sewell", "handicap": 16.1, "ghin": "12103848", "hometown": "Denver, CO", "airbnb": "Airbnb #2", "bio": "Denver-based golfer flying in from Tampa. Solid all-around game with a 16.1 handicap looking to make some noise in the singles Death Match.", "avatar": ""},
-    {"id": "ken", "name": "Ken Yuasa", "handicap": 16.1, "ghin": "12122711", "hometown": "Denver, CO", "airbnb": "Airbnb #1", "bio": "Lufthansa traveler arriving Saturday. Ken brings steady play and a 16.1 handicap to the team events. Riding with Bart from the airport.", "avatar": ""},
-    {"id": "brent", "name": "Brent Nienaber", "handicap": 18.3, "ghin": "1406029", "hometown": "Denver, CO", "airbnb": "Airbnb #2", "bio": "Early bird arriving Friday via Delta. Brent's 18.3 handicap belies a competitive fire that comes out on the links. Virgin Atlantic homeward bound.", "avatar": ""},
-    {"id": "zach", "name": "Zach Sennett", "handicap": 12.1, "ghin": "4021936", "hometown": "Denver, CO", "airbnb": "Airbnb #3", "bio": "One of the lower handicaps in the field at 12.1. Zach (ZPS) is a serious contender for the championship. Denver to EWR to EDI routing.", "avatar": ""},
-    {"id": "jeff", "name": "Jeff Karges", "handicap": 7, "ghin": "13202820", "hometown": "Illinois", "airbnb": "Airbnb #2", "bio": "The ringer. At a 7.0 handicap, Jeff is the lowest handicap in the field and the man to beat. Illinois native flying in Friday. Watch for his long drive entries.", "avatar": ""},
-    {"id": "brad", "name": "Brad Otto", "handicap": null, "ghin": null, "hometown": "Denver, CO", "airbnb": "Airbnb #2", "bio": "Brad's handicap may be unlisted but his enthusiasm is not. Flying Delta to EDI Friday with Brent. Ready to battle in the team events.", "avatar": ""},
-    {"id": "chad", "name": "Chad Kochenberger", "handicap": 14.6, "ghin": "2704537", "hometown": "Denver, CO", "airbnb": "Airbnb #3", "bio": "Chad brings a 14.6 handicap and Denver grit to the Scotland links. United Airlines through EWR. A steady presence in the team formats.", "avatar": ""},
-    {"id": "graham", "name": "Graham Johnson", "handicap": 16.7, "ghin": "3312639", "hometown": "Boston, MA", "airbnb": "Airbnb #3", "bio": "Boston boy making the trip across the pond. Graham at 16.7 is playing The Old Course solo for bonus points. Always a threat for bonus points.", "avatar": ""},
-    {"id": "adriaan", "name": "Adriaan Zimmerman", "handicap": 15.9, "ghin": "12336250", "hometown": "Denver, CO", "airbnb": "Airbnb #1", "bio": "Adriaan already played The Old Course solo on Monday (Rd 2), banking 10 bonus points. Denver-based with a 15.9 handicap. Early Friday arrival.", "avatar": ""},
-    {"id": "ronny", "name": "Ronny Hise", "handicap": 19.1, "ghin": "11579696", "hometown": "Texas", "airbnb": "Airbnb #3", "bio": "The Texas cowboy of the group. Ronny's 19.1 is the highest handicap in the field but he's playing The Old Course solo for big bonus points. Never count him out.", "avatar": ""}
+    {
+      "id": "bart",
+      "name": "Bart Lorang",
+      "handicap": 14,
+      "ghin": "12153941",
+      "hometown": "Lyons, CO",
+      "airbnb": "Airbnb #1",
+      "bio": "Trip organizer and fearless leader. Daily Lottery competitor for The Old Course. Known for bringing the energy and the organisation that makes this trip possible.",
+      "avatar": ""
+    },
+    {
+      "id": "sewell",
+      "name": "Chris Sewell",
+      "handicap": 16.1,
+      "ghin": "12103848",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #2",
+      "bio": "Denver-based golfer flying in from Tampa. Solid all-around game with a 16.1 handicap looking to make some noise in the singles Death Match.",
+      "avatar": ""
+    },
+    {
+      "id": "ken",
+      "name": "Ken Yuasa",
+      "handicap": 16.1,
+      "ghin": "12122711",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #1",
+      "bio": "Lufthansa traveler arriving Saturday. Ken brings steady play and a 16.1 handicap to the team events. Riding with Bart from the airport.",
+      "avatar": ""
+    },
+    {
+      "id": "brent",
+      "name": "Brent Nienaber",
+      "handicap": 18.3,
+      "ghin": "1406029",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #2",
+      "bio": "Early bird arriving Friday via Delta. Brent's 18.3 handicap belies a competitive fire that comes out on the links. Virgin Atlantic homeward bound.",
+      "avatar": ""
+    },
+    {
+      "id": "zach",
+      "name": "Zach Sennett",
+      "handicap": 12.1,
+      "ghin": "4021936",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #3",
+      "bio": "One of the lower handicaps in the field at 12.1. Zach (ZPS) is a serious contender for the championship. Denver to EWR to EDI routing.",
+      "avatar": ""
+    },
+    {
+      "id": "jeff",
+      "name": "Jeff Karges",
+      "handicap": 7,
+      "ghin": "13202820",
+      "hometown": "Illinois",
+      "airbnb": "Airbnb #2",
+      "bio": "The ringer. At a 7.0 handicap, Jeff is the lowest handicap in the field and the man to beat. Illinois native flying in Friday. Watch for his long drive entries.",
+      "avatar": ""
+    },
+    {
+      "id": "brad",
+      "name": "Brad Otto",
+      "handicap": null,
+      "ghin": null,
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #2",
+      "bio": "Brad's handicap may be unlisted but his enthusiasm is not. Flying Delta to EDI Friday with Brent. Ready to battle in the team events.",
+      "avatar": ""
+    },
+    {
+      "id": "chad",
+      "name": "Chad Kochenberger",
+      "handicap": 14.6,
+      "ghin": "2704537",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #3",
+      "bio": "Chad brings a 14.6 handicap and Denver grit to the Scotland links. United Airlines through EWR. A steady presence in the team formats.",
+      "avatar": ""
+    },
+    {
+      "id": "graham",
+      "name": "Graham Johnson",
+      "handicap": 16.7,
+      "ghin": "3312639",
+      "hometown": "Boston, MA",
+      "airbnb": "Airbnb #3",
+      "bio": "Boston boy making the trip across the pond. Graham at 16.7 is playing The Old Course solo for bonus points. Always a threat for bonus points.",
+      "avatar": ""
+    },
+    {
+      "id": "adriaan",
+      "name": "Adriaan Zimmerman",
+      "handicap": 15.9,
+      "ghin": "12336250",
+      "hometown": "Denver, CO",
+      "airbnb": "Airbnb #1",
+      "bio": "Adriaan already played The Old Course solo on Monday (Rd 2), banking 10 bonus points. Denver-based with a 15.9 handicap. Early Friday arrival.",
+      "avatar": ""
+    },
+    {
+      "id": "ronny",
+      "name": "Ronny Hise",
+      "handicap": 19.1,
+      "ghin": "11579696",
+      "hometown": "Texas",
+      "airbnb": "Airbnb #3",
+      "bio": "The Texas cowboy of the group. Ronny's 19.1 is the highest handicap in the field but he's playing The Old Course solo for big bonus points. Never count him out.",
+      "avatar": ""
+    }
   ],
   "alternates": [
-    {"name": "Eric Johnson", "hometown": "Denver, CO"},
-    {"name": "Steven Blair", "hometown": "Oklahoma"},
-    {"name": "Will Farrow", "hometown": "Wyoming"},
-    {"name": "Tristan Fitzpatrick", "hometown": "Denver, CO"},
-    {"name": "Brendon Sewell", "hometown": "Oregon"},
-    {"name": "Todd Nienaber", "hometown": "Louisiana"}
+    {
+      "name": "Eric Johnson",
+      "hometown": "Denver, CO"
+    },
+    {
+      "name": "Steven Blair",
+      "hometown": "Oklahoma"
+    },
+    {
+      "name": "Will Farrow",
+      "hometown": "Wyoming"
+    },
+    {
+      "name": "Tristan Fitzpatrick",
+      "hometown": "Denver, CO"
+    },
+    {
+      "name": "Brendon Sewell",
+      "hometown": "Oregon"
+    },
+    {
+      "name": "Todd Nienaber",
+      "hometown": "Louisiana"
+    }
   ],
   "courses": [
     {
@@ -42,10 +159,15 @@
       "teetimes": "11:20, 11:28, 11:36",
       "par": 70,
       "yards": 6250,
-      "description": "The Eden Course is the second oldest at the St Andrews Links Trust, designed by Harry Colt in 1912. A classic links layout that runs alongside the famous Eden Estuary. With generous fairways and subtle greens, it's the perfect opening round course — approachable but punishing if you lose focus. The closing stretch along the estuary is spectacular on a calm day and brutal in the wind.",
+      "description": "The Eden Course is the second oldest at the St Andrews Links Trust, designed by Harry Colt in 1912. A classic links layout that runs alongside the famous Eden Estuary. With generous fairways and subtle greens, it's the perfect opening round course \u2014 approachable but punishing if you lose focus. The closing stretch along the estuary is spectacular on a calm day and brutal in the wind.",
       "signature": "The par-3 8th plays along the estuary edge, wind howling off the North Sea.",
-      "trolleys": "Available on the day at the starter (£6.50 each, cannot be pre-booked)",
-      "highlights": ["Classic Colt links design", "Eden Estuary views on back nine", "Perfect warm-up for the week ahead", "Wind off the North Sea tests every club"]
+      "trolleys": "Available on the day at the starter (\u00a36.50 each, cannot be pre-booked)",
+      "highlights": [
+        "Classic Colt links design",
+        "Eden Estuary views on back nine",
+        "Perfect warm-up for the week ahead",
+        "Wind off the North Sea tests every club"
+      ]
     },
     {
       "id": "castle",
@@ -58,10 +180,15 @@
       "teetimes": "11:20, 11:30, 11:40",
       "par": 71,
       "yards": 6472,
-      "description": "The newest of the St Andrews Links courses (opened 2008), the Castle Course sits dramatically on a cliff-top overlooking St Andrews Bay. David McLay Kidd's design is a modern links with jaw-dropping views of the town, the Old Course, and the North Sea. The greens are famously undulating — some of the most challenging in Scotland. Not your grandfather's links; this is a 21st-century test.",
+      "description": "The newest of the St Andrews Links courses (opened 2008), the Castle Course sits dramatically on a cliff-top overlooking St Andrews Bay. David McLay Kidd's design is a modern links with jaw-dropping views of the town, the Old Course, and the North Sea. The greens are famously undulating \u2014 some of the most challenging in Scotland. Not your grandfather's links; this is a 21st-century test.",
       "signature": "The par-4 15th plays from the highest point on the course with a 360-degree view of Fife.",
-      "trolleys": "Available on the day at the starter (£6.50 each, cannot be pre-booked)",
-      "highlights": ["Spectacular cliff-top location", "Modern David McLay Kidd design", "Views of St Andrews skyline", "Some of Scotland's most challenging greens"]
+      "trolleys": "Available on the day at the starter (\u00a36.50 each, cannot be pre-booked)",
+      "highlights": [
+        "Spectacular cliff-top location",
+        "Modern David McLay Kidd design",
+        "Views of St Andrews skyline",
+        "Some of Scotland's most challenging greens"
+      ]
     },
     {
       "id": "lundin",
@@ -75,9 +202,15 @@
       "par": 71,
       "yards": 6342,
       "description": "A true hidden gem of Scottish golf. Lundin Links is a classic James Braid-designed links that has hosted Open Qualifying. The course runs along the Fife coast with heather-lined fairways, deep pot bunkers, and some of the most authentic links terrain you'll find outside the big names. The opening holes are a gentle handshake; the middle stretch is a fistfight with the elements.",
-      "signature": "The par-4 14th 'The Gotten' — a blind tee shot over a ridge to a punchbowl fairway, with the sea beyond.",
+      "signature": "The par-4 14th 'The Gotten' \u2014 a blind tee shot over a ridge to a punchbowl fairway, with the sea beyond.",
       "trolleys": "Complimentary (included in reservation)",
-      "highlights": ["James Braid classic design", "Open Qualifying venue pedigree", "Heather-lined fairways", "Deep authentic pot bunkers", "Stunning Fife coastline views"]
+      "highlights": [
+        "James Braid classic design",
+        "Open Qualifying venue pedigree",
+        "Heather-lined fairways",
+        "Deep authentic pot bunkers",
+        "Stunning Fife coastline views"
+      ]
     },
     {
       "id": "crail",
@@ -90,10 +223,16 @@
       "teetimes": "15:10, 15:20, 15:30",
       "par": 69,
       "yards": 6077,
-      "description": "Crail Golfing Society is the 7th oldest golf club in the world (founded 1786). The Balcomie Links is a Tom Morris design that hugs the Fife coast tighter than any course you'll play. At just over 6,000 yards it's short by modern standards, but the narrow fairways, gorse bushes, and coastal winds make it play every inch of its length. This is old-school golf — no frills, just pure links.",
-      "signature": "The par-4 2nd plays along the clifftop with the North Sea roaring below — one of the most photographed holes in Fife.",
+      "description": "Crail Golfing Society is the 7th oldest golf club in the world (founded 1786). The Balcomie Links is a Tom Morris design that hugs the Fife coast tighter than any course you'll play. At just over 6,000 yards it's short by modern standards, but the narrow fairways, gorse bushes, and coastal winds make it play every inch of its length. This is old-school golf \u2014 no frills, just pure links.",
+      "signature": "The par-4 2nd plays along the clifftop with the North Sea roaring below \u2014 one of the most photographed holes in Fife.",
       "trolleys": "TBD if extra fee (included in reservation)",
-      "highlights": ["Founded 1786 — 7th oldest golf club in the world", "Tom Morris design", "Clifftop holes with sea views", "Narrow gorse-lined fairways", "Pure, unadulterated links golf"]
+      "highlights": [
+        "Founded 1786 \u2014 7th oldest golf club in the world",
+        "Tom Morris design",
+        "Clifftop holes with sea views",
+        "Narrow gorse-lined fairways",
+        "Pure, unadulterated links golf"
+      ]
     },
     {
       "id": "aberdour",
@@ -106,10 +245,15 @@
       "teetimes": "13:00, 13:10, 13:20",
       "par": 64,
       "yards": 5036,
-      "description": "A shorter but no-less-charming parkland/links hybrid on the Firth of Forth. Aberdour offers a different test — tree-lined in places, coastal in others, with views across the water to Edinburgh. The shorter length (par 64) means birdie opportunities are there for the taking, but accuracy is at a premium. A beautiful palate cleanser after four days of pure links golf.",
-      "signature": "The par-3 6th plays downhill to a green framed by the Firth of Forth — a wedge and a prayer.",
+      "description": "A shorter but no-less-charming parkland/links hybrid on the Firth of Forth. Aberdour offers a different test \u2014 tree-lined in places, coastal in others, with views across the water to Edinburgh. The shorter length (par 64) means birdie opportunities are there for the taking, but accuracy is at a premium. A beautiful palate cleanser after four days of pure links golf.",
+      "signature": "The par-3 6th plays downhill to a green framed by the Firth of Forth \u2014 a wedge and a prayer.",
       "trolleys": "TBD if extra fee (included in reservation)",
-      "highlights": ["Parkland-links hybrid", "Firth of Forth views", "Birdie-friendly par 64", "Scenic contrast to the pure links courses"]
+      "highlights": [
+        "Parkland-links hybrid",
+        "Firth of Forth views",
+        "Birdie-friendly par 64",
+        "Scenic contrast to the pure links courses"
+      ]
     },
     {
       "id": "dumbarnie",
@@ -122,155 +266,772 @@
       "teetimes": "13:50, 14:00, 14:10",
       "par": 71,
       "yards": 6629,
-      "description": "The grand finale. Dumbarnie Links opened in 2020 to instant acclaim — a modern links that feels like it's been here for centuries. Designed by Clive Clark, it's built on stunning duneland along the Fife coast. Every hole has sea views. The routing is a masterpiece: the front nine tumbles through dunes, the back nine opens up to sweeping vistas. A fitting final battleground for the championship.",
-      "signature": "The par-4 13th plays from a dune-top tee to a fairway that falls away to the sea — pure drama.",
+      "description": "The grand finale. Dumbarnie Links opened in 2020 to instant acclaim \u2014 a modern links that feels like it's been here for centuries. Designed by Clive Clark, it's built on stunning duneland along the Fife coast. Every hole has sea views. The routing is a masterpiece: the front nine tumbles through dunes, the back nine opens up to sweeping vistas. A fitting final battleground for the championship.",
+      "signature": "The par-4 13th plays from a dune-top tee to a fairway that falls away to the sea \u2014 pure drama.",
       "trolleys": "Complimentary (included in reservation)",
-      "highlights": ["Award-winning modern links (opened 2020)", "Clive Clark design", "Sea views from every hole", "Dramatic duneland routing", "Championship finale venue"]
+      "highlights": [
+        "Award-winning modern links (opened 2020)",
+        "Clive Clark design",
+        "Sea views from every hole",
+        "Dramatic duneland routing",
+        "Championship finale venue"
+      ]
     }
   ],
   "schedule": [
-    {"day": "Saturday July 25", "event": "Travel Day — Arrive Edinburgh", "detail": "Multiple flights arriving EDI. Platinum Cabs picking up at 9:00 AM (Van #1 & #2) and 12:30 PM (Van #3, Ken & Bart). 90-min drive to St Andrews. Check-in to Airbnbs.", "type": "travel"},
-    {"day": "Sunday July 26", "event": "Round 1 — Eden Course", "detail": "Tee times 11:20/11:28/11:36. Format: LIST Best Ball Team. Pickup 10:15 AM.", "type": "golf"},
-    {"day": "Monday July 27", "event": "Round 2 — Castle Course", "detail": "Tee times 11:20/11:30/11:40. Format: LIST Death Match/Team. Adriaan plays The Old Course solo (bonus points). Pickup 10:15 AM.", "type": "golf"},
-    {"day": "Tuesday July 28", "event": "Round 3 — Lundin Links", "detail": "Tee times 13:30/13:40/13:50. Format: LIST Group Call. Pickup 12:15 PM.", "type": "golf"},
-    {"day": "Wednesday July 29", "event": "Round 4 — Crail Balcomie", "detail": "Tee times 15:10/15:20/15:30. Pickup 1:45 PM. Graham & Ronny play The Old Course solo (bonus points).", "type": "golf"},
-    {"day": "Thursday July 30", "event": "Round 5 — Aberdour Golf Club", "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM.", "type": "golf"},
-    {"day": "Friday July 31", "event": "Final Round — Dumbarnie Links", "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship concludes.", "type": "golf"},
-    {"day": "Saturday August 1", "event": "Departure Day", "detail": "Vans departing St Andrews for EDI: 6:00 AM (Jeff, Adriaan, Bart), 8:00 AM (Sewell, Ken, Zach, Chad, Graham, Ronny), 10:30 AM (Brent, Brad).", "type": "travel"}
+    {
+      "day": "Saturday July 25",
+      "event": "Travel Day \u2014 Arrive Edinburgh",
+      "detail": "Multiple flights arriving EDI. Platinum Cabs picking up at 9:00 AM (Van #1 & #2) and 12:30 PM (Van #3, Ken & Bart). 90-min drive to St Andrews. Check-in to Airbnbs.",
+      "type": "travel"
+    },
+    {
+      "day": "Sunday July 26",
+      "event": "Round 1 \u2014 Eden Course",
+      "detail": "Tee times 11:20/11:28/11:36. Format: LIST Best Ball Team. Pickup 10:15 AM.",
+      "type": "golf"
+    },
+    {
+      "day": "Monday July 27",
+      "event": "Round 2 \u2014 Castle Course",
+      "detail": "Tee times 11:20/11:30/11:40. Format: LIST Death Match/Team. Adriaan plays The Old Course solo (bonus points). Pickup 10:15 AM.",
+      "type": "golf"
+    },
+    {
+      "day": "Tuesday July 28",
+      "event": "Round 3 \u2014 Lundin Links",
+      "detail": "Tee times 13:30/13:40/13:50. Format: LIST Group Call. Pickup 12:15 PM.",
+      "type": "golf"
+    },
+    {
+      "day": "Wednesday July 29",
+      "event": "Round 4 \u2014 Crail Balcomie",
+      "detail": "Tee times 15:10/15:20/15:30. Pickup 1:45 PM. Graham & Ronny play The Old Course solo (bonus points).",
+      "type": "golf"
+    },
+    {
+      "day": "Thursday July 30",
+      "event": "Round 5 \u2014 Aberdour Golf Club",
+      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM.",
+      "type": "golf"
+    },
+    {
+      "day": "Friday July 31",
+      "event": "Final Round \u2014 Dumbarnie Links",
+      "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship concludes.",
+      "type": "golf"
+    },
+    {
+      "day": "Saturday August 1",
+      "event": "Departure Day",
+      "detail": "Vans departing St Andrews for EDI: 6:00 AM (Jeff, Adriaan, Bart), 8:00 AM (Sewell, Ken, Zach, Chad, Graham, Ronny), 10:30 AM (Brent, Brad).",
+      "type": "travel"
+    }
   ],
   "leaderboard": [
-    {"playerId": "ronny", "skins": 58, "bonus": 5, "total": 63, "note": "Playing The Old Course solo 7.29 — 10 pts"},
-    {"playerId": "brent", "skins": 50, "bonus": 6, "total": 56, "note": ""},
-    {"playerId": "graham", "skins": 49, "bonus": 5, "total": 54, "note": "Playing The Old Course solo 7.29 — 10 pts"},
-    {"playerId": "bart", "skins": 44, "bonus": 4, "total": 48, "note": ""},
-    {"playerId": "brad", "skins": 38, "bonus": 6, "total": 44, "note": ""},
-    {"playerId": "jeff", "skins": 39, "bonus": 4, "total": 43, "note": ""},
-    {"playerId": "chad", "skins": 36, "bonus": 5, "total": 41, "note": ""},
-    {"playerId": "ken", "skins": 31, "bonus": 4, "total": 35, "note": ""},
-    {"playerId": "zach", "skins": 25, "bonus": 9, "total": 34, "note": ""},
-    {"playerId": "adriaan", "skins": 31, "bonus": 2, "total": 33, "note": "Played The Old Course solo 7.27 — 10 pts"},
-    {"playerId": "sewell", "skins": 28, "bonus": 4, "total": 32, "note": ""}
+    {
+      "playerId": "ronny",
+      "skins": 58,
+      "bonus": 35,
+      "total": 93,
+      "note": "Played The Old Course solo 7.29 \u2014 10 pts + EXTRA 20 BONUS for personal best 86!"
+    },
+    {
+      "playerId": "brent",
+      "skins": 50,
+      "bonus": 6,
+      "total": 56,
+      "note": ""
+    },
+    {
+      "playerId": "graham",
+      "skins": 49,
+      "bonus": 5,
+      "total": 54,
+      "note": "Playing The Old Course solo 7.29 \u2014 10 pts"
+    },
+    {
+      "playerId": "bart",
+      "skins": 44,
+      "bonus": 4,
+      "total": 48,
+      "note": ""
+    },
+    {
+      "playerId": "brad",
+      "skins": 38,
+      "bonus": 6,
+      "total": 44,
+      "note": ""
+    },
+    {
+      "playerId": "jeff",
+      "skins": 39,
+      "bonus": 4,
+      "total": 43,
+      "note": ""
+    },
+    {
+      "playerId": "chad",
+      "skins": 36,
+      "bonus": 5,
+      "total": 41,
+      "note": ""
+    },
+    {
+      "playerId": "ken",
+      "skins": 31,
+      "bonus": 4,
+      "total": 35,
+      "note": ""
+    },
+    {
+      "playerId": "zach",
+      "skins": 25,
+      "bonus": 9,
+      "total": 34,
+      "note": ""
+    },
+    {
+      "playerId": "adriaan",
+      "skins": 31,
+      "bonus": 2,
+      "total": 33,
+      "note": "Played The Old Course solo 7.27 \u2014 10 pts"
+    },
+    {
+      "playerId": "sewell",
+      "skins": 28,
+      "bonus": 4,
+      "total": 32,
+      "note": ""
+    }
   ],
   "skinsBreakdown": [
-    {"playerId": "bart", "rounds": [7, 9, 28, null, null, null]},
-    {"playerId": "sewell", "rounds": [15, 0, 13, null, null, null]},
-    {"playerId": "ken", "rounds": [11, 10, 10, null, null, null]},
-    {"playerId": "brent", "rounds": [13, 9, 28, null, null, null]},
-    {"playerId": "zach", "rounds": [13, 2, 10, null, null, null]},
-    {"playerId": "jeff", "rounds": [15, 13, 17, null, null, null]},
-    {"playerId": "brad", "rounds": [13, 10, 15, null, null, null]},
-    {"playerId": "chad", "rounds": [13, 14, 9, null, null, null]},
-    {"playerId": "graham", "rounds": [8, 25, 6, 10, null, null]},
-    {"playerId": "adriaan", "rounds": [8, 10, 13, null, null, null]},
-    {"playerId": "ronny", "rounds": [8, 25, 15, 10, null, null]}
+    {
+      "playerId": "bart",
+      "rounds": [
+        7,
+        9,
+        28,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "sewell",
+      "rounds": [
+        15,
+        0,
+        13,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "ken",
+      "rounds": [
+        11,
+        10,
+        10,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "brent",
+      "rounds": [
+        13,
+        9,
+        28,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "zach",
+      "rounds": [
+        13,
+        2,
+        10,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "jeff",
+      "rounds": [
+        15,
+        13,
+        17,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "brad",
+      "rounds": [
+        13,
+        10,
+        15,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "chad",
+      "rounds": [
+        13,
+        14,
+        9,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "graham",
+      "rounds": [
+        8,
+        25,
+        6,
+        10,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "adriaan",
+      "rounds": [
+        8,
+        10,
+        13,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "ronny",
+      "rounds": [
+        8,
+        25,
+        15,
+        10,
+        null,
+        null
+      ]
+    }
   ],
   "bonusBreakdown": [
-    {"playerId": "bart", "rounds": [0, 3, 1, null, null, null]},
-    {"playerId": "sewell", "rounds": [1, 1, 2, null, null, null]},
-    {"playerId": "ken", "rounds": [0, 1, 3, null, null, null]},
-    {"playerId": "brent", "rounds": [2, 3, 1, null, null, null]},
-    {"playerId": "zach", "rounds": [4, 2, 3, null, null, null]},
-    {"playerId": "jeff", "rounds": [1, 2, 1, null, null, null]},
-    {"playerId": "brad", "rounds": [2, 2, 2, null, null, null]},
-    {"playerId": "chad", "rounds": [4, 1, 0, null, null, null]},
-    {"playerId": "graham", "rounds": [0, 3, 2, null, null, null]},
-    {"playerId": "adriaan", "rounds": [0, 0, 2, null, null, null]},
-    {"playerId": "ronny", "rounds": [0, 3, 2, null, null, null]}
+    {
+      "playerId": "bart",
+      "rounds": [
+        0,
+        3,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "sewell",
+      "rounds": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "ken",
+      "rounds": [
+        0,
+        1,
+        3,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "brent",
+      "rounds": [
+        2,
+        3,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "zach",
+      "rounds": [
+        4,
+        2,
+        3,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "jeff",
+      "rounds": [
+        1,
+        2,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "brad",
+      "rounds": [
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "chad",
+      "rounds": [
+        4,
+        1,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "graham",
+      "rounds": [
+        0,
+        3,
+        2,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "adriaan",
+      "rounds": [
+        0,
+        0,
+        2,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "playerId": "ronny",
+      "rounds": [
+        0,
+        3,
+        2,
+        30,
+        null,
+        null
+      ]
+    }
   ],
   "formatRules": [
-    {"format": "LIST Best Ball Team", "description": "Each player plays their own ball; the team's lowest score on each hole counts."},
-    {"format": "LIST Death Match", "description": "Each player plays their own ball; the individual's lowest score wins the skin."},
-    {"format": "LIST Group Call", "description": "Groups determined day-of by group consensus."},
-    {"format": "Scramble", "description": "Team selects the best shot after every stroke; both players hit from that spot until holed."},
-    {"format": "Shamble", "description": "Team selects the best drive; each player then plays their own ball until holed."},
-    {"format": "Combined Score", "description": "Each player plays their own ball; both scores are combined."}
+    {
+      "format": "LIST Best Ball Team",
+      "description": "Each player plays their own ball; the team's lowest score on each hole counts."
+    },
+    {
+      "format": "LIST Death Match",
+      "description": "Each player plays their own ball; the individual's lowest score wins the skin."
+    },
+    {
+      "format": "LIST Group Call",
+      "description": "Groups determined day-of by group consensus."
+    },
+    {
+      "format": "Scramble",
+      "description": "Team selects the best shot after every stroke; both players hit from that spot until holed."
+    },
+    {
+      "format": "Shamble",
+      "description": "Team selects the best drive; each player then plays their own ball until holed."
+    },
+    {
+      "format": "Combined Score",
+      "description": "Each player plays their own ball; both scores are combined."
+    }
   ],
   "scoringRules": [
-    {"rule": "All holes start at 1 skin."},
-    {"rule": "Each player receives 1 Press per 9 holes. Call 'Press' while the tee shot is in the air to add 1 skin to that hole."},
-    {"rule": "Unused Presses automatically apply to the final hole (at 9 & 18)."},
-    {"rule": "Birdie = 2x skins on the line for that hole."},
-    {"rule": "Eagle = 5x skins on the line for that hole."},
-    {"rule": "Hole-in-One = 100x skins on the line for that hole."},
-    {"rule": "Total skins determine the winner(s)."},
-    {"rule": "If the match is tied on 18, skins on the line are rounded up and divided evenly."}
+    {
+      "rule": "All holes start at 1 skin."
+    },
+    {
+      "rule": "Each player receives 1 Press per 9 holes. Call 'Press' while the tee shot is in the air to add 1 skin to that hole."
+    },
+    {
+      "rule": "Unused Presses automatically apply to the final hole (at 9 & 18)."
+    },
+    {
+      "rule": "Birdie = 2x skins on the line for that hole."
+    },
+    {
+      "rule": "Eagle = 5x skins on the line for that hole."
+    },
+    {
+      "rule": "Hole-in-One = 100x skins on the line for that hole."
+    },
+    {
+      "rule": "Total skins determine the winner(s)."
+    },
+    {
+      "rule": "If the match is tied on 18, skins on the line are rounded up and divided evenly."
+    }
   ],
   "bonusRules": [
-    {"name": "Long Drive", "perNine": true, "description": "Each 9 includes 1 Long Drive (ball must finish in the fairway) — Longest Par 5 on that nine", "points": 1},
-    {"name": "Japan", "perNine": true, "description": "Each 9 includes 1 Closest to Pin 'Japan' (ball must finish on the green) — Shortest Par 3 on that nine", "points": 1},
-    {"name": "Birdie", "perNine": false, "description": "Any birdie during the round", "points": 1},
-    {"name": "Birdie Chip In", "perNine": false, "description": "Chip-in birdie", "points": 2},
-    {"name": "Par Chip In", "perNine": false, "description": "Chip-in par save", "points": 1},
-    {"name": "Eagle", "perNine": false, "description": "Any eagle during the round", "points": 10},
-    {"name": "Eagle Chip In", "perNine": false, "description": "Chip-in eagle", "points": 20}
+    {
+      "name": "Long Drive",
+      "perNine": true,
+      "description": "Each 9 includes 1 Long Drive (ball must finish in the fairway) \u2014 Longest Par 5 on that nine",
+      "points": 1
+    },
+    {
+      "name": "Japan",
+      "perNine": true,
+      "description": "Each 9 includes 1 Closest to Pin 'Japan' (ball must finish on the green) \u2014 Shortest Par 3 on that nine",
+      "points": 1
+    },
+    {
+      "name": "Birdie",
+      "perNine": false,
+      "description": "Any birdie during the round",
+      "points": 1
+    },
+    {
+      "name": "Birdie Chip In",
+      "perNine": false,
+      "description": "Chip-in birdie",
+      "points": 2
+    },
+    {
+      "name": "Par Chip In",
+      "perNine": false,
+      "description": "Chip-in par save",
+      "points": 1
+    },
+    {
+      "name": "Eagle",
+      "perNine": false,
+      "description": "Any eagle during the round",
+      "points": 10
+    },
+    {
+      "name": "Eagle Chip In",
+      "perNine": false,
+      "description": "Chip-in eagle",
+      "points": 20
+    }
   ],
   "oldCourseSolo": {
     "description": "Players can book a solo round at The Old Course (via the Daily Lottery ballot). Each successful solo round earns 10 bonus points to the championship total.",
     "players": [
-      {"playerId": "adriaan", "date": "July 27 (Monday)", "status": "completed", "points": 10},
-      {"playerId": "graham", "date": "July 29 (Wednesday)", "status": "today", "points": 10},
-      {"playerId": "ronny", "date": "July 29 (Wednesday)", "status": "today", "points": 10}
+      {
+        "playerId": "adriaan",
+        "date": "July 27 (Monday)",
+        "status": "completed",
+        "points": 10
+      },
+      {
+        "playerId": "graham",
+        "date": "July 29 (Wednesday)",
+        "status": "today",
+        "points": 10
+      },
+      {
+        "playerId": "ronny",
+        "date": "July 29 (Wednesday)",
+        "status": "completed",
+        "points": 30
+      }
     ]
   },
   "airbnbs": [
-    {"name": "Airbnb #1", "address": "35A Bell St, St Andrews, FIFE, KY16 9UX", "bedrooms": 3, "bathrooms": 2, "occupants": ["Bart Lorang", "Ken Yuasa", "Adriaan Zimmerman"]},
-    {"name": "Airbnb #2", "address": "4D Alexandra Place, St Andrews, FIFE, KY16 9XD", "bedrooms": 3, "bathrooms": 2, "occupants": ["Chris Sewell", "Brent Nienaber", "Brad Otto", "Jeff Karges"]},
-    {"name": "Airbnb #3", "address": "1 Rose Lane, St Andrews, FIFE, KY16 9EW", "bedrooms": 4, "bathrooms": 2, "occupants": ["Zach Sennett", "Chad Kochenberger", "Graham Johnson", "Ronny Hise"]}
+    {
+      "name": "Airbnb #1",
+      "address": "35A Bell St, St Andrews, FIFE, KY16 9UX",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "occupants": [
+        "Bart Lorang",
+        "Ken Yuasa",
+        "Adriaan Zimmerman"
+      ]
+    },
+    {
+      "name": "Airbnb #2",
+      "address": "4D Alexandra Place, St Andrews, FIFE, KY16 9XD",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "occupants": [
+        "Chris Sewell",
+        "Brent Nienaber",
+        "Brad Otto",
+        "Jeff Karges"
+      ]
+    },
+    {
+      "name": "Airbnb #3",
+      "address": "1 Rose Lane, St Andrews, FIFE, KY16 9EW",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "occupants": [
+        "Zach Sennett",
+        "Chad Kochenberger",
+        "Graham Johnson",
+        "Ronny Hise"
+      ]
+    }
   ],
   "pubs": [
-    {"name": "Dunvegan Bar & Restaurant", "vibe": "Classic golf pub — walls covered in memorabilia, open fires, hearty Scottish fare", "specialty": "Pre-round breakfast and post-round pints"},
-    {"name": "Molly Malones", "vibe": "Lively Irish pub in the heart of St Andrews. Karaoke, live music, big screens.", "specialty": "Late-night craic and the meeting point near all three Airbnbs"},
-    {"name": "Jigger Inn's Road Hole Bar", "vibe": "Historic pub at the Old Course Hotel. Cozy, dark wood, fireplaces. Golf royalty drinks here.", "specialty": "Whisky selection and the famous Road Hole view"},
-    {"name": "The Criterion 'The Crit'", "vibe": "Old-school St Andrews pub. No frills, great beer, proper locals' spot.", "specialty": "Traditional ales and a warm fire"},
-    {"name": "Whey Pat Tavern", "vibe": "Charming tavern with courtyard seating. Excellent food and a lively atmosphere.", "specialty": "Sunday roasts and local craft beer"},
-    {"name": "Jannettas Gelataria", "vibe": "Famous Italian gelateria — an institution since 1908. Not a pub but essential.", "specialty": "Award-winning gelato. The best post-round treat in St Andrews."},
-    {"name": "The Vic (late night)", "vibe": "Late-night option — open until 3 AM. Dancing, drinks, and debriefs.", "specialty": "Extended hours for celebrating (or drowning sorrows)"},
-    {"name": "T-Squared Social", "vibe": "Tiger Woods & Justin Timberlake entertainment venue. Upscale sports bar, simulators, cocktails.", "specialty": "Modern nightlife destination — simulators, cocktails, social scene"}
+    {
+      "name": "Dunvegan Bar & Restaurant",
+      "vibe": "Classic golf pub \u2014 walls covered in memorabilia, open fires, hearty Scottish fare",
+      "specialty": "Pre-round breakfast and post-round pints"
+    },
+    {
+      "name": "Molly Malones",
+      "vibe": "Lively Irish pub in the heart of St Andrews. Karaoke, live music, big screens.",
+      "specialty": "Late-night craic and the meeting point near all three Airbnbs"
+    },
+    {
+      "name": "Jigger Inn's Road Hole Bar",
+      "vibe": "Historic pub at the Old Course Hotel. Cozy, dark wood, fireplaces. Golf royalty drinks here.",
+      "specialty": "Whisky selection and the famous Road Hole view"
+    },
+    {
+      "name": "The Criterion 'The Crit'",
+      "vibe": "Old-school St Andrews pub. No frills, great beer, proper locals' spot.",
+      "specialty": "Traditional ales and a warm fire"
+    },
+    {
+      "name": "Whey Pat Tavern",
+      "vibe": "Charming tavern with courtyard seating. Excellent food and a lively atmosphere.",
+      "specialty": "Sunday roasts and local craft beer"
+    },
+    {
+      "name": "Jannettas Gelataria",
+      "vibe": "Famous Italian gelateria \u2014 an institution since 1908. Not a pub but essential.",
+      "specialty": "Award-winning gelato. The best post-round treat in St Andrews."
+    },
+    {
+      "name": "The Vic (late night)",
+      "vibe": "Late-night option \u2014 open until 3 AM. Dancing, drinks, and debriefs.",
+      "specialty": "Extended hours for celebrating (or drowning sorrows)"
+    },
+    {
+      "name": "T-Squared Social",
+      "vibe": "Tiger Woods & Justin Timberlake entertainment venue. Upscale sports bar, simulators, cocktails.",
+      "specialty": "Modern nightlife destination \u2014 simulators, cocktails, social scene"
+    }
   ],
   "whatToBring": [
     "PASSPORT",
     "Water bottle (stay hydrated on the links)",
     "Snacks & energy bars for the courses",
-    "Rain gear — this is Scotland, after all",
+    "Rain gear \u2014 this is Scotland, after all",
     "Comfortable golf shoes (waterproof recommended)",
     "Comfortable golf socks (bring extras)",
     "Electrolyte/hydration packets",
     "Gold Bond (you'll thank us later)",
     "International outlet adapter (UK Type G plugs)",
     "Sunscreen (yes, even in Scotland)",
-    "British Pound Sterling — cash for caddie tips and pub rounds"
+    "British Pound Sterling \u2014 cash for caddie tips and pub rounds"
   ],
   "pairings": [
-    {"day": "Sunday", "course": "Eden Course", "format": "LIST Best Ball Team", "groups": [
-      {"group": 1, "players": ["Bart Lorang", "Ken Yuasa", "Adriaan Zimmerman"]},
-      {"group": 2, "players": ["Chris Sewell", "Jeff Karges", "Brent Nienaber", "Brad Otto"]},
-      {"group": 3, "players": ["Zach Sennett", "Chad Kochenberger", "Graham Johnson", "Ronny Hise"]}
-    ]},
-    {"day": "Monday", "course": "The Castle Course", "format": "LIST Death Match/Team", "groups": [
-      {"group": 1, "players": ["Zach Sennett", "Jeff Karges", "Brad Otto"]},
-      {"group": 2, "players": ["Chris Sewell", "Ken Yuasa", "Chad Kochenberger"]},
-      {"group": 3, "players": ["Bart Lorang", "Brent Nienaber", "Graham Johnson", "Ronny Hise"]}
-    ]},
-    {"day": "Tuesday", "course": "Lundin Links", "format": "LIST Group Call", "groups": [
-      {"group": 1, "players": ["Chad Kochenberger", "Jeff Karges", "Graham Johnson"]},
-      {"group": 2, "players": ["Adriaan Zimmerman", "Chris Sewell", "Brad Otto", "Ronny Hise"]},
-      {"group": 3, "players": ["Bart Lorang", "Brent Nienaber", "Zach Sennett", "Ken Yuasa"]}
-    ]},
-    {"day": "Wednesday", "course": "Crail Balcomie", "format": "LIST Group Call", "groups": [
-      {"group": 1, "players": ["Bart Lorang", "Zach Sennett", "Chris Sewell"]},
-      {"group": 2, "players": ["Ken Yuasa", "Brent Nienaber", "Brad Otto"]},
-      {"group": 3, "players": ["Adriaan Zimmerman", "Jeff Karges", "Chad Kochenberger"]}
-    ]}
+    {
+      "day": "Sunday",
+      "course": "Eden Course",
+      "format": "LIST Best Ball Team",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Bart Lorang",
+            "Ken Yuasa",
+            "Adriaan Zimmerman"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Chris Sewell",
+            "Jeff Karges",
+            "Brent Nienaber",
+            "Brad Otto"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Zach Sennett",
+            "Chad Kochenberger",
+            "Graham Johnson",
+            "Ronny Hise"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Monday",
+      "course": "The Castle Course",
+      "format": "LIST Death Match/Team",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Zach Sennett",
+            "Jeff Karges",
+            "Brad Otto"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Chris Sewell",
+            "Ken Yuasa",
+            "Chad Kochenberger"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Bart Lorang",
+            "Brent Nienaber",
+            "Graham Johnson",
+            "Ronny Hise"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "course": "Lundin Links",
+      "format": "LIST Group Call",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Chad Kochenberger",
+            "Jeff Karges",
+            "Graham Johnson"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Adriaan Zimmerman",
+            "Chris Sewell",
+            "Brad Otto",
+            "Ronny Hise"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Bart Lorang",
+            "Brent Nienaber",
+            "Zach Sennett",
+            "Ken Yuasa"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "course": "Crail Balcomie",
+      "format": "LIST Group Call",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Bart Lorang",
+            "Zach Sennett",
+            "Chris Sewell"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Ken Yuasa",
+            "Brent Nienaber",
+            "Brad Otto"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Adriaan Zimmerman",
+            "Jeff Karges",
+            "Chad Kochenberger"
+          ]
+        }
+      ]
+    }
   ],
   "longDriveHoles": {
-    "front": {"eden": 9, "castle": 4, "lundin": 9, "crail": 2, "aberdour": 7, "dumbarnie": 5},
-    "back": {"eden": 16, "castle": 18, "lundin": 13, "crail": 18, "aberdour": 13, "dumbarnie": 15}
+    "front": {
+      "eden": 9,
+      "castle": 4,
+      "lundin": 9,
+      "crail": 2,
+      "aberdour": 7,
+      "dumbarnie": 5
+    },
+    "back": {
+      "eden": 16,
+      "castle": 18,
+      "lundin": 13,
+      "crail": 18,
+      "aberdour": 13,
+      "dumbarnie": 15
+    }
   },
   "japanHoles": {
-    "front": {"eden": 5, "castle": 8, "lundin": 6, "crail": 3, "aberdour": 6, "dumbarnie": 8},
-    "back": {"eden": 10, "castle": 17, "lundin": 14, "crail": 17, "aberdour": 15, "dumbarnie": 16}
+    "front": {
+      "eden": 5,
+      "castle": 8,
+      "lundin": 6,
+      "crail": 3,
+      "aberdour": 6,
+      "dumbarnie": 8
+    },
+    "back": {
+      "eden": 10,
+      "castle": 17,
+      "lundin": 14,
+      "crail": 17,
+      "aberdour": 15,
+      "dumbarnie": 16
+    }
   },
   "airbnbPickups": {
-    "description": "All Airbnbs are within 0.1 miles of Molly Malones — the designated meeting point"
+    "description": "All Airbnbs are within 0.1 miles of Molly Malones \u2014 the designated meeting point"
   }
 }
