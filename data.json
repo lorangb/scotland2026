@@ -332,9 +332,9 @@
     {
       "playerId": "ronny",
       "skins": 64,
-      "bonus": 37,
-      "total": 101,
-      "note": "Shot PB 86 at The Old Course (+10 solo, +20 nomination!) + 16 skins at Crail"
+      "bonus": 17,
+      "total": 81,
+      "note": "Shot PB 86 at The Old Course (+10 solo) + 16 skins at Crail"
     },
     {
       "playerId": "brent",
@@ -768,7 +768,7 @@
         "playerId": "ronny",
         "date": "July 29 (Wednesday)",
         "status": "completed",
-        "points": 30
+        "points": 10
       }
     ]
   },
