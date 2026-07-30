@@ -1216,15 +1216,18 @@ function buildPlayers(d) {
 function buildCourses(d) {
   const g = document.getElementById('courseGrid');
   g.innerHTML = d.courses.map(c => {
-    const isToday = c.day === 'Thursday';
-    const label = isToday ? '<span class="card-label label-today"><i class="fas fa-flag"></i> Playing Today</span>'
-      : `<span class="card-label ${c.day === 'Sunday' || c.day === 'Monday' || c.day === 'Tuesday' ? 'label-golf' : 'label-golf'}">Rd ${d.courses.indexOf(c)+1}</span>`;
+      const isToday = c.day === 'Thursday';
+      const label = isToday ? '<span class="card-label label-today"><i class="fas fa-flag"></i> Playing Today</span>'
+        : `<span class="card-label label-golf">Rd ${d.courses.indexOf(c)+1}</span>`;
 
-    return `<div class="card">
-      <div class="card-image" style="background:linear-gradient(135deg,var(--purple),var(--green));">
-        <div class="card-icon"><i class="fas fa-flag"></i></div>
-        ${label}
-      </div>
+      const bgImg = c.image
+        ? `background:linear-gradient(rgba(45,27,78,0.3),rgba(45,27,78,0.3)),url('${c.image}') center/cover no-repeat;`
+        : 'background:linear-gradient(135deg,var(--purple),var(--green));';
+
+      return `<div class="card">
+        <div class="card-image" style="${bgImg}">
+          ${label}
+        </div>
       <div class="card-body">
         <h3>${c.name}</h3>
         <div class="subtitle">${c.day} ${c.date} · Par ${c.par} · ${c.yards} yds</div>
