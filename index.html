@@ -732,7 +732,7 @@ footer i { color: var(--gold); }
 <section class="hero" id="top">
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
-    <div class="hero-badge"><i class="fas fa-circle" style="color:#2ECC71;font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> LIVE — Round 4 Today</div>
+    <div class="hero-badge"><i class="fas fa-circle" style="color:#2ECC71;font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> LIVE — Round 5 Today</div>
     <h1>LIST GOLF</h1>
     <h2>Scotland 2026 Championship</h2>
     <div class="hero-meta">
@@ -765,15 +765,15 @@ footer i { color: var(--gold); }
   <div class="section-header">
     <h2>Championship Leaderboard</h2>
     <div class="section-divider"></div>
-    <p>Live standings after Round 3 (Lundin Links). Updated after every round.</p>
+    <p>Live standings after Round 4 (Crail Balcomie). Updated after every round.</p>
   </div>
 
   <div class="live-bar" id="liveBar">
     <div class="live-bar-left">
       <div class="live-dot"></div>
       <div>
-        <h3>Round 4 — Crail Balcomie</h3>
-        <div class="status-text" id="statusText">Tee times 15:10 · Loading weather...</div>
+        <h3>Round 5 — Aberdour Golf Club</h3>
+        <div class="status-text" id="statusText">Tee times 13:00 · Loading weather...</div>
       </div>
     </div>
     <div>
@@ -807,7 +807,7 @@ footer i { color: var(--gold); }
     <i class="fas fa-crown"></i>
     <div>
       <h4>The Old Course Solo Challenge</h4>
-      <p>Players who secure a tee time at The Old Course (via Daily Lottery) earn <strong>+10 bonus points</strong> toward the championship. Adriaan completed his solo round Monday. Graham &amp; Ronny are playing today.</p>
+      <p>Ronny &amp; Graham both played Wednesday — each earned +10 pts.</p>
     </div>
   </div>
 </section>
@@ -1077,7 +1077,7 @@ async function loadWeather() {
     // Update status with wind
     const st = document.getElementById('statusText');
     if (st) {
-      st.textContent = `Tee times 15:10 · ${condition}, ${temp}°C, wind ${wind} mph`;
+      st.textContent = `Tee times 13:00 · ${condition}, ${temp}°C, wind ${wind} mph`;
     }
   } catch(e) {
     w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
@@ -1108,7 +1108,7 @@ function buildLeaderboard(d) {
 function buildSchedule(d) {
   const tl = document.getElementById('timeline');
   tl.innerHTML = d.schedule.map((s, i) => {
-    const isToday = s.day.includes('July 29') || s.day.includes('Wednesday');
+    const isToday = s.day.includes('July 30') || s.day.includes('Thursday');
     return `<div class="timeline-item ${isToday ? 'today' : ''}">
       <div class="tl-date">${s.day}</div>
       <h3>${s.event}</h3>
@@ -1122,7 +1122,7 @@ function buildPairings(d) {
   const panels = document.getElementById('pairingPanels');
 
   tabs.innerHTML = d.pairings.map((p, i) =>
-    `<button class="tab-btn ${i === 3 ? 'active' : ''}" onclick="showPairing(${i})">${p.day}</button>`
+    `<button class="tab-btn ${i === 4 ? 'active' : ''}" onclick="showPairing(${i})">${p.day}</button>`
   ).join('');
 
   panels.innerHTML = d.pairings.map((p, i) => {
@@ -1134,7 +1134,7 @@ function buildPairings(d) {
       </div>`
     ).join('');
 
-    return `<div class="tab-panel ${i === 3 ? 'active' : ''}" id="pairingPanel${i}">
+    return `<div class="tab-panel ${i === 4 ? 'active' : ''}" id="pairingPanel${i}">
       <h4 style="color:var(--text);margin-bottom:0.5rem;">${p.course}${formatNote}</h4>
       <div style="display:flex;flex-direction:column;gap:0.5rem;">${groupsHtml}</div>
     </div>`;
@@ -1177,7 +1177,7 @@ function buildPlayers(d) {
 function buildCourses(d) {
   const g = document.getElementById('courseGrid');
   g.innerHTML = d.courses.map(c => {
-    const isToday = c.day === 'Wednesday';
+    const isToday = c.day === 'Thursday';
     const label = isToday ? '<span class="card-label label-today"><i class="fas fa-flag"></i> Playing Today</span>'
       : `<span class="card-label ${c.day === 'Sunday' || c.day === 'Monday' || c.day === 'Tuesday' ? 'label-golf' : 'label-golf'}">Rd ${d.courses.indexOf(c)+1}</span>`;
 

@@ -5,9 +5,9 @@
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
     "status": "LIVE",
-    "currentRound": 4,
+    "currentRound": 5,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-29T21:00:00+01:00"
+    "lastUpdated": "2026-07-30T08:00:00+01:00"
   },
   "players": [
     {
@@ -348,7 +348,7 @@
       "skins": 39,
       "bonus": 5,
       "total": 44,
-      "note": "Playing The Old Course solo 7.29 \u2014 10 pts"
+      "note": "Completed Old Course solo 7.29 (+10 pts)"
     },
     {
       "playerId": "bart",
@@ -761,7 +761,7 @@
       {
         "playerId": "graham",
         "date": "July 29 (Wednesday)",
-        "status": "today",
+        "status": "completed",
         "points": 10
       },
       {
@@ -990,6 +990,72 @@
             "Adriaan Zimmerman",
             "Jeff Karges",
             "Chad Kochenberger"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "course": "Aberdour Golf Club",
+      "format": "LIST Group Call",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Bart Lorang",
+            "Ken Yuasa",
+            "Adriaan Zimmerman"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Chris Sewell",
+            "Jeff Karges",
+            "Brent Nienaber",
+            "Brad Otto"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Zach Sennett",
+            "Chad Kochenberger",
+            "Graham Johnson",
+            "Ronny Hise"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "course": "Dumbarnie Links",
+      "format": "LIST Group Call",
+      "groups": [
+        {
+          "group": 1,
+          "players": [
+            "Bart Lorang",
+            "Ken Yuasa",
+            "Adriaan Zimmerman"
+          ]
+        },
+        {
+          "group": 2,
+          "players": [
+            "Chris Sewell",
+            "Jeff Karges",
+            "Brent Nienaber",
+            "Brad Otto"
+          ]
+        },
+        {
+          "group": 3,
+          "players": [
+            "Zach Sennett",
+            "Chad Kochenberger",
+            "Graham Johnson",
+            "Ronny Hise"
           ]
         }
       ]
