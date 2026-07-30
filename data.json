@@ -4,7 +4,7 @@
     "tagline": "7 Days. 6 Courses. 11 Players. Organized by Chris Sewell.",
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
-    "status": "LIVE \u2014 R5 TENTATIVE",
+    "status": "LIVE \u2014 R5 OFFICIAL",
     "currentRound": 5,
     "totalRounds": 6,
     "lastUpdated": "2026-07-30T18:00:00+01:00"
@@ -344,10 +344,10 @@
     },
     {
       "playerId": "jeff",
-      "skins": 74,
+      "skins": 76,
       "bonus": 6,
-      "total": 80,
-      "note": "R5: 30 skins + LD"
+      "total": 82,
+      "note": "R5: 30+LD"
     },
     {
       "playerId": "bart",
@@ -359,30 +359,44 @@
     {
       "playerId": "graham",
       "skins": 72,
-      "bonus": 6,
-      "total": 78,
-      "note": "R5: 23 skins + LD. Old Course solo 7.29"
+      "bonus": 7,
+      "total": 79,
+      "note": "R5: 23+LD+Japan. Old Course solo 7.29"
     },
     {
       "playerId": "sewell",
       "skins": 68,
-      "bonus": 8,
-      "total": 76,
-      "note": "R5: 23 skins + Japan"
+      "bonus": 9,
+      "total": 77,
+      "note": "R5: 23+LD+Japan"
+    },
+    {
+      "playerId": "adriaan",
+      "skins": 61,
+      "bonus": 14,
+      "total": 75,
+      "note": "Old Course solo 7.27. Kingsbarn solo 7.30"
     },
     {
       "playerId": "brent",
       "skins": 67,
       "bonus": 7,
       "total": 74,
-      "note": "R5: 6 skins + LD"
+      "note": "R5: 6+LD"
     },
     {
-      "playerId": "adriaan",
-      "skins": 51,
-      "bonus": 14,
-      "total": 65,
-      "note": "Played The Old Course solo 7.27 \u2014 10 pts"
+      "playerId": "chad",
+      "skins": 61,
+      "bonus": 10,
+      "total": 71,
+      "note": "R5: 10 skins. Old Course solo 7.30"
+    },
+    {
+      "playerId": "brad",
+      "skins": 58,
+      "bonus": 6,
+      "total": 64,
+      "note": "R5: 6 skins"
     },
     {
       "playerId": "zach",
@@ -390,20 +404,6 @@
       "bonus": 10,
       "total": 63,
       "note": "R5: 10 skins"
-    },
-    {
-      "playerId": "brad",
-      "skins": 55,
-      "bonus": 6,
-      "total": 61,
-      "note": "R5: 6 skins"
-    },
-    {
-      "playerId": "chad",
-      "skins": 47,
-      "bonus": 10,
-      "total": 57,
-      "note": "Old Course solo 7.30"
     },
     {
       "playerId": "ken",
@@ -473,7 +473,7 @@
       "playerId": "jeff",
       "rounds": [
         15,
-        13,
+        15,
         11,
         5,
         30,
@@ -484,7 +484,7 @@
       "playerId": "brad",
       "rounds": [
         13,
-        10,
+        13,
         15,
         11,
         6,
@@ -496,9 +496,9 @@
       "rounds": [
         13,
         14,
-        9,
+        13,
         11,
-        0,
+        10,
         null
       ]
     },
@@ -520,7 +520,7 @@
         10,
         13,
         20,
-        0,
+        10,
         null
       ]
     },
@@ -555,7 +555,7 @@
         1,
         2,
         3,
-        1,
+        2,
         null
       ]
     },
@@ -632,7 +632,7 @@
         3,
         2,
         0,
-        1,
+        2,
         null
       ]
     },
@@ -779,6 +779,13 @@
       {
         "playerId": "chad",
         "date": "July 30 (Thursday)",
+        "status": "completed",
+        "points": 10
+      },
+      {
+        "playerId": "adriaan",
+        "date": "July 30 (Thursday)",
+        "course": "Kingsbarn",
         "status": "completed",
         "points": 10
       }
