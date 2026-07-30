@@ -17,8 +17,8 @@
       "ghin": "12153941",
       "hometown": "Lyons, CO",
       "airbnb": "Airbnb #1",
-      "bio": "Spiritual founder of LIST Golf. Showed up with a passport and a grin. Chris Sewell handled every detail this year \u2014 logistics, transport, Airbnbs, the works. Bart's job is to hit fairways, buy rounds, and look distinguished.",
-      "avatar": ""
+      "avatar": "images/bart.jpg",
+      "bio": "Spiritual founder of LIST Golf. Showed up with a passport and a grin. Chris Sewell handled every detail this year \u2014 logistics, transport, Airbnbs, the works. Bart's job is to hit fairways, buy rounds, and look distinguished."
     },
     {
       "id": "sewell",
@@ -27,8 +27,8 @@
       "ghin": "12103848",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #2",
-      "bio": "The man who actually made this trip happen. Chris Sewell organized every detail \u2014 Airbnbs, Platinum Cabs, tee times, the Daily Lottery entries, flight coordination, and making sure 11 dudes didn't miss their connections. Playing off a 16.1 while running the whole show. Absolute legend.",
-      "avatar": ""
+      "avatar": "images/sewell.jpg",
+      "bio": "The man who actually made this trip happen. Chris Sewell organized every detail \u2014 Airbnbs, Platinum Cabs, tee times, the Daily Lottery entries, flight coordination, and making sure 11 dudes didn't miss their connections. Playing off a 16.1 while running the whole show. Absolute legend."
     },
     {
       "id": "ken",
@@ -37,8 +37,8 @@
       "ghin": "12122711",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #1",
-      "bio": "Lufthansa traveler arriving Saturday. Ken brings steady play and a 16.1 handicap to the team events. Riding with Bart from the airport.",
-      "avatar": ""
+      "avatar": "images/ken.jpg",
+      "bio": "Lufthansa traveler arriving Saturday. Ken brings steady play and a 16.1 handicap to the team events. Riding with Bart from the airport."
     },
     {
       "id": "brent",
@@ -47,8 +47,8 @@
       "ghin": "1406029",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #2",
-      "bio": "Early bird arriving Friday via Delta. Brent's 18.3 handicap belies a competitive fire that comes out on the links. Virgin Atlantic homeward bound.",
-      "avatar": ""
+      "avatar": "images/brent.jpg",
+      "bio": "Early bird arriving Friday via Delta. Brent's 18.3 handicap belies a competitive fire that comes out on the links. Virgin Atlantic homeward bound."
     },
     {
       "id": "zach",
@@ -57,8 +57,8 @@
       "ghin": "4021936",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #3",
-      "bio": "One of the lower handicaps in the field at 12.1. Zach (ZPS) is a serious contender for the championship. Denver to EWR to EDI routing.",
-      "avatar": ""
+      "avatar": "images/zach.jpg",
+      "bio": "One of the lower handicaps in the field at 12.1. Zach (ZPS) is a serious contender for the championship. Denver to EWR to EDI routing."
     },
     {
       "id": "jeff",
@@ -67,8 +67,8 @@
       "ghin": "13202820",
       "hometown": "Illinois",
       "airbnb": "Airbnb #2",
-      "bio": "The ringer. At a 7.0 handicap, Jeff is the lowest handicap in the field and the man to beat. Illinois native flying in Friday. Watch for his long drive entries.",
-      "avatar": ""
+      "avatar": "images/jeff.jpg",
+      "bio": "The ringer. At a 7.0 handicap, Jeff is the lowest handicap in the field and the man to beat. Illinois native flying in Friday. Watch for his long drive entries."
     },
     {
       "id": "brad",
@@ -77,8 +77,8 @@
       "ghin": null,
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #2",
-      "bio": "Brad's handicap may be unlisted but his enthusiasm is not. Flying Delta to EDI Friday with Brent. Ready to battle in the team events.",
-      "avatar": ""
+      "avatar": "images/brad.jpg",
+      "bio": "Brad's handicap may be unlisted but his enthusiasm is not. Flying Delta to EDI Friday with Brent. Ready to battle in the team events."
     },
     {
       "id": "chad",
@@ -87,8 +87,8 @@
       "ghin": "2704537",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #3",
-      "bio": "Chad brings a 14.6 handicap and Denver grit to the Scotland links. United Airlines through EWR. A steady presence in the team formats.",
-      "avatar": ""
+      "avatar": "images/chad.jpg",
+      "bio": "Chad brings a 14.6 handicap and Denver grit to the Scotland links. United Airlines through EWR. A steady presence in the team formats."
     },
     {
       "id": "graham",
@@ -97,8 +97,8 @@
       "ghin": "3312639",
       "hometown": "Boston, MA",
       "airbnb": "Airbnb #3",
-      "bio": "Boston boy making the trip across the pond. Graham at 16.7 is playing The Old Course solo for bonus points. Always a threat for bonus points.",
-      "avatar": ""
+      "avatar": "images/graham.jpg",
+      "bio": "Boston boy making the trip across the pond. Graham at 16.7 is playing The Old Course solo for bonus points. Always a threat for bonus points."
     },
     {
       "id": "adriaan",
@@ -107,8 +107,8 @@
       "ghin": "12336250",
       "hometown": "Denver, CO",
       "airbnb": "Airbnb #1",
-      "bio": "Adriaan already played The Old Course solo on Monday (Rd 2), banking 10 bonus points. Denver-based with a 15.9 handicap. Early Friday arrival.",
-      "avatar": ""
+      "avatar": "images/adriaan.jpg",
+      "bio": "Adriaan already played The Old Course solo on Monday (Rd 2), banking 10 bonus points. Denver-based with a 15.9 handicap. Early Friday arrival."
     },
     {
       "id": "ronny",
@@ -117,8 +117,8 @@
       "ghin": "11579696",
       "hometown": "Texas",
       "airbnb": "Airbnb #3",
-      "bio": "The Texas cowboy of the group. Ronny's 19.1 is the highest handicap in the field but he just shot a personal best 86 at The Old Course. Never count him out.",
-      "avatar": ""
+      "avatar": "images/ronny.jpg",
+      "bio": "The Texas cowboy of the group. Ronny's 19.1 is the highest handicap in the field but he just shot a personal best 86 at The Old Course. Never count him out."
     }
   ],
   "alternates": [

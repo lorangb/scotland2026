@@ -1151,10 +1151,11 @@ function buildPlayers(d) {
   g.innerHTML = d.players.map(p => {
     const hcp = p.handicap ? `<div class="stat"><strong>Handicap</strong> ${p.handicap}</div>` : '';
     const ghin = p.ghin ? `<div class="stat"><strong>GHIN</strong> ${p.ghin}</div>` : '';
+    const avatarHtml = p.avatar ? `<img src="${p.avatar}" alt="${p.name}" style="width:60px;height:60px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;position:absolute;bottom:-30px;left:1.5rem;">` : `<div class="initials-large">${getInitials(p.name)}</div>`;
     return `<div class="card player-card">
-      <div class="card-image">
-        <div class="card-icon"><i class="fas fa-user"></i></div>
-        <div class="initials-large">${getInitials(p.name)}</div>
+      <div class="card-image" style="background:linear-gradient(135deg, var(--purple), #3D2A6E);overflow:hidden;">
+        ${p.avatar ? `<img src="${p.avatar}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;opacity:0.5;">` : `<div class="card-icon"><i class="fas fa-user"></i></div>`}
+        ${avatarHtml}
       </div>
       <div class="card-body">
         <h3>${p.name}</h3>
