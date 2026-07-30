@@ -719,6 +719,61 @@ nav a i { font-size: 0.75rem; }
 }
 .loading i { font-size: 2rem; margin-bottom: 1rem; }
 
+/* Trophy section */
+.trophy-section {
+  display: flex;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, var(--card), var(--card-hover));
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.trophy-image-wrap {
+  flex: 0 0 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+}
+.trophy-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.trophy-info {
+  flex: 1;
+  min-width: 250px;
+}
+.trophy-info h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.trophy-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.trophy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.trophy-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.trophy-icon {
+  font-size: 1.5rem;
+  width: 32px;
+  text-align: center;
+}
+
 /* Old course special section */
 .old-course-banner {
   background: linear-gradient(135deg, var(--purple), #1a0a2e);
@@ -856,6 +911,33 @@ footer i { color: var(--gold); }
       </thead>
       <tbody id="leaderboardBody"></tbody>
     </table>
+  </div>
+
+  <!-- Trophies -->
+  <div class="trophy-section" id="trophySection">
+    <div class="trophy-image-wrap">
+      <img src="images/trophies.jpg" alt="LIST Golf Scotland 2026 Trophies" class="trophy-photo">
+    </div>
+    <div class="trophy-info">
+      <h3><i class="fas fa-trophy" style="color:var(--gold);"></i> What's at Stake</h3>
+      <p class="trophy-desc" id="trophyDesc"></p>
+      <div class="trophy-list">
+        <div class="trophy-item">
+          <span class="trophy-icon">🏆</span>
+          <div>
+            <strong style="color:var(--gold);">The Champions Trophy</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);"> — Winner takes all</span>
+          </div>
+        </div>
+        <div class="trophy-item">
+          <span class="trophy-icon">🥈</span>
+          <div>
+            <strong style="color:#A8A8A8;">The Wee Trophy</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);"> — Runner-up</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Old Course solo section -->
@@ -1458,6 +1540,12 @@ function buildPubs(d) {
 }
 
 function buildLogistics(d) {
+  // Trophies
+  const ts = document.getElementById('trophyDesc');
+  if (ts && d.trophies) {
+    ts.textContent = d.trophies.description;
+  }
+
   // Airbnbs
   document.getElementById('airbnbGrid').innerHTML = d.airbnbs.map(a =>
     `<div class="card">

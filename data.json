@@ -1109,5 +1109,11 @@
   },
   "airbnbPickups": {
     "description": "All Airbnbs are within 0.1 miles of Molly Malones \u2014 the designated meeting point"
+  },
+  "trophies": {
+    "image": "images/trophies.jpg",
+    "champion": "The Champions Trophy",
+    "runnerUp": "The Wee Trophy",
+    "description": "The Champions Trophy goes to the winner of the LIST Golf Scotland 2026 Championship. The Wee Trophy is for the runner-up. Both are on display at the course and will be awarded after the final round at Dumbarnie Links."
   }
 }
