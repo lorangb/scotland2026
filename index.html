@@ -316,6 +316,14 @@ nav a i { font-size: 0.75rem; }
   border: 1px solid var(--border);
   flex-shrink: 0;
 }
+.lb-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 1px solid var(--gold);
+  flex-shrink: 0;
+}
 .leaderboard .handicap-badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
@@ -453,14 +461,38 @@ nav a i { font-size: 0.75rem; }
 
 /* Player Card */
 .player-card .card-image {
-  height: 100px;
-  background: linear-gradient(135deg, var(--purple), #3D2A6E);
+  height: 130px;
+  position: relative;
+}
+.player-card .card-image img.photo-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.player-card .card-image .photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, var(--dark) 100%);
+  pointer-events: none;
+}
+.player-card .avatar-circle {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  object-fit: cover;
+  object-position: center 25%;
+  position: absolute;
+  bottom: -36px;
+  left: 1.5rem;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 .player-card .initials-large {
-  width: 60px; height: 60px;
+  width: 72px; height: 72px;
   border-radius: 50%;
   background: var(--dark);
-  border: 2px solid var(--gold);
+  border: 3px solid var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,10 +500,12 @@ nav a i { font-size: 0.75rem; }
   font-weight: 800;
   color: var(--gold);
   position: absolute;
-  bottom: -30px;
+  bottom: -36px;
   left: 1.5rem;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
-.player-card .card-body { padding-top: 2rem; }
+.player-card .card-body { padding-top: 2.5rem; }
 .player-stats {
   display: flex;
   gap: 0.8rem;
@@ -1095,7 +1129,7 @@ function buildLeaderboard(d) {
     const hcp = player.handicap ? `<span class="handicap-badge">${player.handicap}</span>` : '';
     return `<tr>
       <td class="rank ${rankClass}">${medal}</td>
-      <td class="player-name"><span class="initials">${getInitials(player.name)}</span>${player.name}${hcp}</td>
+      <td class="player-name">${p.avatar ? `<img src="${p.avatar}" alt="" style="width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center 25%;border:1px solid var(--gold);flex-shrink:0;" class="lb-avatar">` : `<span class="initials">${getInitials(player.name)}</span>`}${player.name}${hcp}</td>
       <td style="text-align:center;color:var(--text-muted);">${player.handicap || '—'}</td>
       <td style="text-align:center;" class="skins-num">${p.skins}</td>
       <td style="text-align:center;" class="bonus-num">+${p.bonus}</td>
@@ -1151,10 +1185,14 @@ function buildPlayers(d) {
   g.innerHTML = d.players.map(p => {
     const hcp = p.handicap ? `<div class="stat"><strong>Handicap</strong> ${p.handicap}</div>` : '';
     const ghin = p.ghin ? `<div class="stat"><strong>GHIN</strong> ${p.ghin}</div>` : '';
-    const avatarHtml = p.avatar ? `<img src="${p.avatar}" alt="${p.name}" style="width:60px;height:60px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;position:absolute;bottom:-30px;left:1.5rem;">` : `<div class="initials-large">${getInitials(p.name)}</div>`;
+    const avatarHtml = p.avatar
+      ? `<img class="avatar-circle" src="${p.avatar}" alt="${p.name}">`
+      : `<div class="initials-large">${getInitials(p.name)}</div>`;
     return `<div class="card player-card">
-      <div class="card-image" style="background:linear-gradient(135deg, var(--purple), #3D2A6E);overflow:hidden;">
-        ${p.avatar ? `<img src="${p.avatar}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;opacity:0.5;">` : `<div class="card-icon"><i class="fas fa-user"></i></div>`}
+      <div class="card-image">
+        ${p.avatar
+          ? `<img class="photo-bg" src="${p.avatar}" alt="${p.name}"><div class="photo-overlay"></div>`
+          : `<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--purple),#3D2A6E);display:flex;align-items:center;justify-content:center;"><div class="card-icon"><i class="fas fa-user" style="opacity:0.3;font-size:3rem;"></i></div></div>`}
         ${avatarHtml}
       </div>
       <div class="card-body">
