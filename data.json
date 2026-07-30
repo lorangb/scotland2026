@@ -312,7 +312,7 @@
     {
       "day": "Thursday July 30",
       "event": "Round 5 \u2014 Aberdour Golf Club",
-      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM.",
+      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM. Chad plays The Old Course solo (bonus points).",
       "type": "golf"
     },
     {
@@ -332,9 +332,9 @@
     {
       "playerId": "ronny",
       "skins": 64,
-      "bonus": 17,
-      "total": 81,
-      "note": "Shot PB 86 at The Old Course (+10 solo) + 16 skins at Crail"
+      "bonus": 7,
+      "total": 71,
+      "note": "Old Course solo 7.29 — +10 pts (not in total)"
     },
     {
       "playerId": "brent",
@@ -345,10 +345,10 @@
     },
     {
       "playerId": "graham",
-      "skins": 39,
+      "skins": 49,
       "bonus": 5,
-      "total": 44,
-      "note": "Completed Old Course solo 7.29 (+10 pts)"
+      "total": 54,
+      "note": "Old Course solo 7.29 — +10 pts (not in total)"
     },
     {
       "playerId": "bart",
@@ -366,9 +366,9 @@
     },
     {
       "playerId": "jeff",
-      "skins": 50,
+      "skins": 44,
       "bonus": 5,
-      "total": 55,
+      "total": 49,
       "note": ""
     },
     {
@@ -376,13 +376,13 @@
       "skins": 47,
       "bonus": 10,
       "total": 57,
-      "note": ""
+      "note": "Old Course solo 7.30 — +10 pts (not in total)"
     },
     {
       "playerId": "ken",
-      "skins": 47,
+      "skins": 37,
       "bonus": 6,
-      "total": 53,
+      "total": 43,
       "note": ""
     },
     {
@@ -436,7 +436,7 @@
         11,
         10,
         10,
-        16,
+        6,
         null,
         null
       ]
@@ -468,7 +468,7 @@
       "rounds": [
         15,
         13,
-        17,
+        11,
         5,
         null,
         null
@@ -502,7 +502,7 @@
         8,
         25,
         6,
-        0,
+        10,
         null,
         null
       ]
@@ -769,6 +769,12 @@
         "date": "July 29 (Wednesday)",
         "status": "completed",
         "points": 10
+      },
+      {
+        "playerId": "chad",
+        "date": "July 30 (Thursday)",
+        "status": "completed",
+        "points": 10
       }
     ]
   },
@@ -1003,26 +1009,24 @@
           "group": 1,
           "players": [
             "Bart Lorang",
-            "Ken Yuasa",
-            "Adriaan Zimmerman"
+            "Jeff Karges",
+            "Ronny Hise"
           ]
         },
         {
           "group": 2,
           "players": [
+            "Brad Otto",
             "Chris Sewell",
-            "Jeff Karges",
-            "Brent Nienaber",
-            "Brad Otto"
+            "Graham Johnson"
           ]
         },
         {
           "group": 3,
           "players": [
             "Zach Sennett",
-            "Chad Kochenberger",
-            "Graham Johnson",
-            "Ronny Hise"
+            "Ken Yuasa",
+            "Brent Nienaber"
           ]
         }
       ]
