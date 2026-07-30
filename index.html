@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>LIST Golf Scotland 2026 Championship</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -627,6 +630,25 @@ nav a i { font-size: 0.75rem; }
 .weather-details .extra i { color: var(--gold); width: 18px; margin-right: 0.3rem; }
 .weather-updated { font-size: 0.7rem; color: var(--text-muted); text-align: right; }
 
+/* Temp toggle */
+.temp-toggle {
+  background: rgba(201,168,76,0.15);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 4px;
+  font-family: 'Inter', sans-serif;
+}
+.temp-toggle:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
 /* Pubs */
 .pub-card {
   display: flex;
@@ -1014,10 +1036,53 @@ footer i { color: var(--gold); }
 
 <script>
 const DATA = null; // loaded from data.json
+let useF = null; // set by locale detection
 
+// Course-specific coordinates for weather
+const COURSE_COORDS = {
+  1: { lat: 56.3413, lon: -2.8139, name: "Eden Course, St Andrews" },
+  2: { lat: 56.3327, lon: -2.7713, name: "Castle Course, St Andrews" },
+  3: { lat: 56.2129, lon: -2.9619, name: "Lundin Links" },
+  4: { lat: 56.2608, lon: -2.6117, name: "Crail Balcomie" },
+  5: { lat: 56.0100, lon: -3.1825, name: "Aberdour Golf Club" },
+  6: { lat: 56.2257, lon: -2.8772, name: "Dumbarnie Links" },
+};
+
+const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+// Detect locale: default °F for US/CA/Pacific, °C for everywhere else
+function detectTempUnit() {
+  // Check localStorage override first
+  const saved = localStorage.getItem('list_golf_temp_unit');
+  if (saved === 'F') { useF = true; return true; }
+  if (saved === 'C') { useF = false; return false; }
+
+  const lang = navigator.language || navigator.languages?.[0] || 'en-US';
+  // US, Canada, Palau, Micronesia, Marshall Islands, Bahamas, Cayman, Liberia
+  const imperialRegions = ['en-US','en-CA','en-PW','en-FM','en-MH','en-BS','en-KY'];
+  if (typeof useF === 'boolean') return useF;
+  const isImperial = imperialRegions.some(r => lang.startsWith(r)) || lang === 'en-US';
+  useF = isImperial;
+  return useF;
+}
+
+function cToF(c) { return Math.round(c * 9/5 + 32); }
+function fToC(f) { return Math.round((f - 32) * 5/9); }
+
+function formatTemp(c, useFahrenheit) {
+  if (useFahrenheit) return cToF(c);
+  return Math.round(c);
+}
+function tempUnit(useFahrenheit) { return useFahrenheit ? '°F' : '°C'; }
+
+function getTodayDay() { return DAY_NAMES[new Date().getDay()]; }
+function getTodayStr() { return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long' }); }
+
+// Bust cache on every page load
+const CACHE_BUST = Date.now();
 async function loadData() {
   try {
-    const resp = await fetch('data.json');
+    const resp = await fetch('data.json?_=' + CACHE_BUST);
     return await resp.json();
   } catch(e) {
     console.error('Failed to load data:', e);
@@ -1037,10 +1102,32 @@ function formatDate(iso) {
 
 async function loadWeather() {
   const w = document.getElementById('weatherWidget');
+
+  // Determine locale preference
+  const usingF = detectTempUnit();
+
+  // Determine which course is today by matching the actual day
+  let todayCoords = { lat: 56.3398, lon: -2.7967, name: 'St Andrews' };
+  const todayDay = getTodayDay();
   try {
-    // Open-Meteo free API - St Andrews coordinates
-    const resp = await fetch('https://api.open-meteo.com/v1/forecast?latitude=56.3398&longitude=-2.7967&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m&daily=temperature_2m_max,temperature_2m_min,weather_code&wind_speed_unit=mph&timezone=Europe/London');
+    const d = await (await fetch(`data.json?_=${CACHE_BUST}`)).json();
+    const today = d.courses.find(c => c.day === todayDay);
+    if (today) {
+      const idx = d.courses.indexOf(today) + 1;
+      todayCoords = COURSE_COORDS[idx] || todayCoords;
+    }
+  } catch(e) {
+    // fallback to St Andrews
+  }
+
+  try {
+    // Open-Meteo free API - always fetch in Celsius, convert client-side
+    const resp = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${todayCoords.lat}&longitude=${todayCoords.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m&daily=temperature_2m_max,temperature_2m_min,weather_code&wind_speed_unit=mph&timezone=Europe/London`);
     const data = await resp.json();
+
+    // St Andrews forecast as fallback for the week overview
+    const stResp = await fetch('https://api.open-meteo.com/v1/forecast?latitude=56.3398&longitude=-2.7967&daily=temperature_2m_max,temperature_2m_min,weather_code&wind_speed_unit=mph&timezone=Europe/London&forecast_days=4');
+    const stData = await stResp.json();
 
     const code = data.current.weather_code;
     const conditions = {
@@ -1066,14 +1153,14 @@ async function loadWeather() {
     const condition = conditions[wcode] || 'Unknown';
     const icon = icons[wcode] || 'fa-cloud';
 
-    const temp = Math.round(data.current.temperature_2m);
-    const feels = Math.round(data.current.apparent_temperature);
+    const tempC = data.current.temperature_2m;
+    const feelsC = data.current.apparent_temperature;
     const humidity = data.current.relative_humidity_2m;
     const wind = Math.round(data.current.wind_speed_10m);
     const gusts = Math.round(data.current.wind_gusts_10m);
 
-    // Forecast
-    const fc = data.daily;
+    // Forecast from St Andrews data
+    const fc = stData.daily;
     let forecastHtml = '';
     if (fc && fc.time) {
       forecastHtml = fc.time.slice(0,4).map((t,i) => {
@@ -1081,23 +1168,28 @@ async function loadWeather() {
         const day = dt.toLocaleDateString('en-GB', { weekday: 'short' });
         const fCode = fc.weather_code[i];
         const fIcon = icons[fCode] || 'fa-cloud';
+        const maxC = fc.temperature_2m_max[i];
         return `<span style="text-align:center;min-width:70px;">
           <div style="font-size:0.65rem;color:var(--text-muted);">${day}</div>
           <i class="fas ${fIcon}" style="color:var(--sky);font-size:0.9rem;margin:0.2rem 0;"></i>
-          <div style="font-size:0.75rem;font-weight:600;">${Math.round(fc.temperature_2m_max[i])}°</div>
+          <div style="font-size:0.75rem;font-weight:600;" class="fc-temp" data-c="${maxC}">${formatTemp(maxC, usingF)}${tempUnit(usingF)}</div>
         </span>`;
       }).join('');
     }
 
+    const toggleLabel = usingF ? '°F' : '°C';
+    const toggleOther = usingF ? '°C' : '°F';
+
     w.innerHTML = `
       <div class="weather-icon-temp">
         <i class="fas ${icon}"></i>
-        <span class="temp">${temp}</span><span class="unit">°C</span>
+        <span class="temp" id="currentTemp" data-c="${tempC}">${formatTemp(tempC, usingF)}</span><span class="unit">${tempUnit(usingF)}</span>
+        <button class="temp-toggle" onclick="toggleTempUnit()" title="Switch to ${toggleOther}">${toggleOther}</button>
       </div>
       <div class="weather-details">
-        <div class="condition">${condition} in St Andrews</div>
+        <div class="condition">${condition} at ${todayCoords.name}</div>
         <div class="extra">
-          <i class="fas fa-temperature-low"></i> Feels like ${feels}°C
+          <i class="fas fa-temperature-low"></i> Feels like <span id="feelsTemp" data-c="${feelsC}">${formatTemp(feelsC, usingF)}</span>${tempUnit(usingF)}
           <i class="fas fa-droplet" style="margin-left:0.8rem;"></i> ${humidity}%
           <i class="fas fa-wind" style="margin-left:0.8rem;"></i> ${wind} mph (gusts ${gusts} mph)
         </div>
@@ -1111,10 +1203,52 @@ async function loadWeather() {
     // Update status with wind
     const st = document.getElementById('statusText');
     if (st) {
-      st.textContent = `Tee times 13:00 · ${condition}, ${temp}°C, wind ${wind} mph`;
+      st.textContent = `Tee times 13:00 · ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
     }
   } catch(e) {
     w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
+  }
+}
+
+// Toggle between °F and °C
+function toggleTempUnit() {
+  useF = !useF;
+  localStorage.setItem('list_golf_temp_unit', useF ? 'F' : 'C');
+
+  // Update current temp
+  const ct = document.getElementById('currentTemp');
+  if (ct) {
+    const c = parseFloat(ct.dataset.c);
+    ct.textContent = formatTemp(c, useF);
+    ct.nextElementSibling.textContent = tempUnit(useF);
+  }
+
+  // Update feels like
+  const ft = document.getElementById('feelsTemp');
+  if (ft) {
+    const c = parseFloat(ft.dataset.c);
+    ft.textContent = formatTemp(c, useF);
+  }
+
+  // Update forecast temps
+  document.querySelectorAll('.fc-temp').forEach(el => {
+    const c = parseFloat(el.dataset.c);
+    el.textContent = formatTemp(c, useF) + tempUnit(useF);
+  });
+
+  // Update toggle button
+  const btn = document.querySelector('.temp-toggle');
+  if (btn) {
+    const next = useF ? '°C' : '°F';
+    btn.textContent = next;
+    btn.title = 'Switch to ' + next;
+  }
+
+  // Update status text too if it has a temp
+  const st = document.getElementById('statusText');
+  if (st) {
+    // Re-extract from the condition text already shown
+    // Just update unit display — the main UI already changed
   }
 }
 
@@ -1141,8 +1275,10 @@ function buildLeaderboard(d) {
 
 function buildSchedule(d) {
   const tl = document.getElementById('timeline');
+  const todayStr = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+  const todayDay = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()];
   tl.innerHTML = d.schedule.map((s, i) => {
-    const isToday = s.day.includes('July 30') || s.day.includes('Thursday');
+    const isToday = s.day.includes(todayStr) || s.day.includes(todayDay);
     return `<div class="timeline-item ${isToday ? 'today' : ''}">
       <div class="tl-date">${s.day}</div>
       <h3>${s.event}</h3>
@@ -1154,9 +1290,14 @@ function buildSchedule(d) {
 function buildPairings(d) {
   const tabs = document.getElementById('pairingTabs');
   const panels = document.getElementById('pairingPanels');
+  const todayDay = getTodayDay();
+
+  // Find today's pairing index
+  let todayIdx = d.pairings.findIndex(p => p.day === todayDay);
+  if (todayIdx < 0) todayIdx = 0;
 
   tabs.innerHTML = d.pairings.map((p, i) =>
-    `<button class="tab-btn ${i === 4 ? 'active' : ''}" onclick="showPairing(${i})">${p.day}</button>`
+    `<button class="tab-btn ${i === todayIdx ? 'active' : ''}" onclick="showPairing(${i})">${p.day}</button>`
   ).join('');
 
   panels.innerHTML = d.pairings.map((p, i) => {
@@ -1168,7 +1309,7 @@ function buildPairings(d) {
       </div>`
     ).join('');
 
-    return `<div class="tab-panel ${i === 4 ? 'active' : ''}" id="pairingPanel${i}">
+    return `<div class="tab-panel ${i === todayIdx ? 'active' : ''}" id="pairingPanel${i}">
       <h4 style="color:var(--text);margin-bottom:0.5rem;">${p.course}${formatNote}</h4>
       <div style="display:flex;flex-direction:column;gap:0.5rem;">${groupsHtml}</div>
     </div>`;
@@ -1215,8 +1356,9 @@ function buildPlayers(d) {
 
 function buildCourses(d) {
   const g = document.getElementById('courseGrid');
+  const todayDay = getTodayDay();
   g.innerHTML = d.courses.map(c => {
-      const isToday = c.day === 'Thursday';
+      const isToday = c.day === todayDay;
       const label = isToday ? '<span class="card-label label-today"><i class="fas fa-flag"></i> Playing Today</span>'
         : `<span class="card-label label-golf">Rd ${d.courses.indexOf(c)+1}</span>`;
 
