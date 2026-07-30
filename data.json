@@ -4,10 +4,10 @@
     "tagline": "7 Days. 6 Courses. 11 Players. Organized by Chris Sewell.",
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
-    "status": "LIVE",
+    "status": "LIVE \u2014 R5 TENTATIVE",
     "currentRound": 5,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-30T08:00:00+01:00"
+    "lastUpdated": "2026-07-30T18:00:00+01:00"
   },
   "players": [
     {
@@ -318,7 +318,7 @@
     {
       "day": "Thursday July 30",
       "event": "Round 5 \u2014 Aberdour Golf Club",
-      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM. Chad plays The Old Course solo (bonus points).",
+      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM. Chad plays The Old Course solo (bonus points). Scores TENTATIVE pending official verification.",
       "type": "golf"
     },
     {
@@ -337,65 +337,44 @@
   "leaderboard": [
     {
       "playerId": "ronny",
-      "skins": 64,
+      "skins": 75,
       "bonus": 7,
-      "total": 71,
-      "note": "Old Course solo 7.29 — +10 pts (not in total)"
+      "total": 82,
+      "note": "Old Course solo 7.29 \u2014 +10 pts (not in total)"
     },
     {
-      "playerId": "brent",
-      "skins": 61,
+      "playerId": "jeff",
+      "skins": 74,
       "bonus": 6,
-      "total": 67,
+      "total": 80,
+      "note": ""
+    },
+    {
+      "playerId": "bart",
+      "skins": 72,
+      "bonus": 7,
+      "total": 79,
       "note": ""
     },
     {
       "playerId": "graham",
-      "skins": 49,
-      "bonus": 5,
-      "total": 54,
-      "note": "Old Course solo 7.29 — +10 pts (not in total)"
+      "skins": 72,
+      "bonus": 6,
+      "total": 78,
+      "note": "Old Course solo 7.29 \u2014 +10 pts (not in total)"
     },
     {
-      "playerId": "bart",
-      "skins": 61,
+      "playerId": "sewell",
+      "skins": 68,
+      "bonus": 8,
+      "total": 76,
+      "note": ""
+    },
+    {
+      "playerId": "brent",
+      "skins": 67,
       "bonus": 7,
-      "total": 68,
-      "note": ""
-    },
-    {
-      "playerId": "brad",
-      "skins": 49,
-      "bonus": 6,
-      "total": 55,
-      "note": ""
-    },
-    {
-      "playerId": "jeff",
-      "skins": 44,
-      "bonus": 5,
-      "total": 49,
-      "note": ""
-    },
-    {
-      "playerId": "chad",
-      "skins": 47,
-      "bonus": 10,
-      "total": 57,
-      "note": "Old Course solo 7.30 — +10 pts (not in total)"
-    },
-    {
-      "playerId": "ken",
-      "skins": 37,
-      "bonus": 6,
-      "total": 43,
-      "note": ""
-    },
-    {
-      "playerId": "zach",
-      "skins": 43,
-      "bonus": 10,
-      "total": 53,
+      "total": 74,
       "note": ""
     },
     {
@@ -406,10 +385,31 @@
       "note": "Played The Old Course solo 7.27 \u2014 10 pts"
     },
     {
-      "playerId": "sewell",
-      "skins": 45,
-      "bonus": 7,
-      "total": 52,
+      "playerId": "zach",
+      "skins": 53,
+      "bonus": 10,
+      "total": 63,
+      "note": ""
+    },
+    {
+      "playerId": "brad",
+      "skins": 55,
+      "bonus": 6,
+      "total": 61,
+      "note": ""
+    },
+    {
+      "playerId": "chad",
+      "skins": 47,
+      "bonus": 10,
+      "total": 57,
+      "note": "Old Course solo 7.30 \u2014 +10 pts (not in total)"
+    },
+    {
+      "playerId": "ken",
+      "skins": 47,
+      "bonus": 6,
+      "total": 53,
       "note": ""
     }
   ],
@@ -421,7 +421,7 @@
         9,
         28,
         17,
-        null,
+        11,
         null
       ]
     },
@@ -432,7 +432,7 @@
         0,
         13,
         17,
-        null,
+        23,
         null
       ]
     },
@@ -443,7 +443,7 @@
         10,
         10,
         6,
-        null,
+        10,
         null
       ]
     },
@@ -454,7 +454,7 @@
         9,
         28,
         11,
-        null,
+        6,
         null
       ]
     },
@@ -465,7 +465,7 @@
         2,
         10,
         18,
-        null,
+        10,
         null
       ]
     },
@@ -476,7 +476,7 @@
         13,
         11,
         5,
-        null,
+        30,
         null
       ]
     },
@@ -487,7 +487,7 @@
         10,
         15,
         11,
-        null,
+        6,
         null
       ]
     },
@@ -498,7 +498,7 @@
         14,
         9,
         11,
-        null,
+        0,
         null
       ]
     },
@@ -509,7 +509,7 @@
         25,
         6,
         10,
-        null,
+        23,
         null
       ]
     },
@@ -520,7 +520,7 @@
         10,
         13,
         20,
-        null,
+        0,
         null
       ]
     },
@@ -531,7 +531,7 @@
         25,
         15,
         16,
-        null,
+        11,
         null
       ]
     }
@@ -544,7 +544,7 @@
         3,
         1,
         3,
-        null,
+        0,
         null
       ]
     },
@@ -555,7 +555,7 @@
         1,
         2,
         3,
-        null,
+        1,
         null
       ]
     },
@@ -566,7 +566,7 @@
         1,
         3,
         2,
-        null,
+        0,
         null
       ]
     },
@@ -577,7 +577,7 @@
         3,
         1,
         0,
-        null,
+        1,
         null
       ]
     },
@@ -588,7 +588,7 @@
         2,
         3,
         1,
-        null,
+        0,
         null
       ]
     },
@@ -599,7 +599,7 @@
         2,
         1,
         1,
-        null,
+        1,
         null
       ]
     },
@@ -610,7 +610,7 @@
         2,
         2,
         0,
-        null,
+        0,
         null
       ]
     },
@@ -621,7 +621,7 @@
         1,
         0,
         5,
-        null,
+        0,
         null
       ]
     },
@@ -632,7 +632,7 @@
         3,
         2,
         0,
-        null,
+        1,
         null
       ]
     },
@@ -643,7 +643,7 @@
         0,
         2,
         12,
-        null,
+        0,
         null
       ]
     },
@@ -654,7 +654,7 @@
         3,
         2,
         2,
-        null,
+        0,
         null
       ]
     }
