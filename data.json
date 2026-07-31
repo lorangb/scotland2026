@@ -4,10 +4,10 @@
     "tagline": "7 Days. 6 Courses. 11 Players. Organized by Chris Sewell.",
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
-    "status": "LIVE \u2014 R5 OFFICIAL",
-    "currentRound": 5,
+    "status": "LIVE - Final Round Today",
+    "currentRound": 6,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-30T18:00:00+01:00"
+    "lastUpdated": "2026-07-31T09:00:00+01:00"
   },
   "players": [
     {
@@ -318,7 +318,7 @@
     {
       "day": "Thursday July 30",
       "event": "Round 5 \u2014 Aberdour Golf Club",
-      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM. Chad plays The Old Course solo (bonus points). Scores TENTATIVE pending official verification.",
+      "detail": "Tee times 13:00/13:10/13:20. Pickup 11:15 AM. Chad plays The Old Course solo (bonus points). Official scores updated.",
       "type": "golf"
     },
     {
@@ -336,81 +336,81 @@
   ],
   "leaderboard": [
     {
-      "playerId": "ronny",
-      "skins": 75,
-      "bonus": 7,
-      "total": 82,
-      "note": "R5: 11 skins. Old Course solo 7.29"
-    },
-    {
       "playerId": "jeff",
       "skins": 76,
-      "bonus": 6,
-      "total": 82,
-      "note": "R5: 30+LD"
+      "bonus": 25,
+      "total": 101,
+      "note": "R5: 30+LD. Bonus: 14+5+1+1+4=25"
     },
     {
-      "playerId": "bart",
-      "skins": 72,
-      "bonus": 7,
-      "total": 79,
-      "note": "R5: 11 skins"
+      "playerId": "ronny",
+      "skins": 75,
+      "bonus": 23,
+      "total": 98,
+      "note": "R5: 11 skins. Old Course solo 7.29 (10 pts)"
     },
     {
       "playerId": "graham",
       "skins": 72,
-      "bonus": 7,
-      "total": 79,
-      "note": "R5: 23+LD+Japan. Old Course solo 7.29"
+      "bonus": 23,
+      "total": 95,
+      "note": "Old Course solo 7.29 (10 pts). Bonus: 10+6+2+0+5=23"
     },
     {
-      "playerId": "sewell",
+      "playerId": "brent",
       "skins": 68,
-      "bonus": 9,
-      "total": 77,
-      "note": "R5: 23+LD+Japan"
+      "bonus": 21,
+      "total": 89,
+      "note": "R3: 29 skins. Bonus: 12+3+5+0+1=21"
     },
     {
       "playerId": "adriaan",
       "skins": 61,
-      "bonus": 14,
-      "total": 75,
-      "note": "Old Course solo 7.27. Kingsbarn solo 7.30"
-    },
-    {
-      "playerId": "brent",
-      "skins": 67,
-      "bonus": 7,
-      "total": 74,
-      "note": "R5: 6+LD"
+      "bonus": 27,
+      "total": 88,
+      "note": "Old Course 7.27 + Kingsbarn 7.30 (20 pts). Bonus: 10+0+2+15+0=27"
     },
     {
       "playerId": "chad",
       "skins": 61,
-      "bonus": 10,
-      "total": 71,
-      "note": "R5: 10 skins. Old Course solo 7.30"
+      "bonus": 26,
+      "total": 87,
+      "note": "Old Course solo 7.30 (10 pts). Bonus: 17+1+3+5+0=26"
+    },
+    {
+      "playerId": "bart",
+      "skins": 73,
+      "bonus": 12,
+      "total": 85,
+      "note": "R3: 29 skins. Bonus: 1+3+5+3+0=12"
+    },
+    {
+      "playerId": "sewell",
+      "skins": 68,
+      "bonus": 15,
+      "total": 83,
+      "note": "Bonus: 4+1+2+3+5=15"
     },
     {
       "playerId": "brad",
       "skins": 58,
-      "bonus": 6,
-      "total": 64,
-      "note": "R5: 6 skins"
+      "bonus": 22,
+      "total": 80,
+      "note": "Bonus: 12+5+5+0+0=22"
     },
     {
       "playerId": "zach",
       "skins": 53,
-      "bonus": 10,
-      "total": 63,
-      "note": "R5: 10 skins"
+      "bonus": 16,
+      "total": 69,
+      "note": "Bonus: 7+2+3+4+0=16"
     },
     {
       "playerId": "ken",
       "skins": 47,
-      "bonus": 6,
-      "total": 53,
-      "note": "R5: 10 skins"
+      "bonus": 10,
+      "total": 57,
+      "note": "Bonus: 4+1+3+2+0=10"
     }
   ],
   "skinsBreakdown": [
@@ -419,7 +419,7 @@
       "rounds": [
         7,
         9,
-        28,
+        29,
         17,
         11,
         null
@@ -452,7 +452,7 @@
       "rounds": [
         13,
         9,
-        28,
+        29,
         11,
         6,
         null
@@ -540,9 +540,9 @@
     {
       "playerId": "bart",
       "rounds": [
-        0,
-        3,
         1,
+        3,
+        5,
         3,
         0,
         null
@@ -551,18 +551,18 @@
     {
       "playerId": "sewell",
       "rounds": [
-        1,
+        4,
         1,
         2,
         3,
-        2,
+        5,
         null
       ]
     },
     {
       "playerId": "ken",
       "rounds": [
-        0,
+        4,
         1,
         3,
         2,
@@ -573,9 +573,9 @@
     {
       "playerId": "brent",
       "rounds": [
-        2,
+        12,
         3,
-        1,
+        5,
         0,
         1,
         null
@@ -584,10 +584,10 @@
     {
       "playerId": "zach",
       "rounds": [
-        4,
+        7,
         2,
         3,
-        1,
+        4,
         0,
         null
       ]
@@ -595,20 +595,20 @@
     {
       "playerId": "jeff",
       "rounds": [
+        14,
+        5,
         1,
-        2,
         1,
-        1,
-        1,
+        4,
         null
       ]
     },
     {
       "playerId": "brad",
       "rounds": [
-        2,
-        2,
-        2,
+        12,
+        5,
+        5,
         0,
         0,
         null
@@ -617,9 +617,9 @@
     {
       "playerId": "chad",
       "rounds": [
-        4,
+        17,
         1,
-        0,
+        3,
         5,
         0,
         null
@@ -628,21 +628,21 @@
     {
       "playerId": "graham",
       "rounds": [
-        0,
-        3,
+        10,
+        6,
         2,
         0,
-        2,
+        5,
         null
       ]
     },
     {
       "playerId": "adriaan",
       "rounds": [
-        0,
+        10,
         0,
         2,
-        12,
+        15,
         0,
         null
       ]
@@ -650,9 +650,9 @@
     {
       "playerId": "ronny",
       "rounds": [
-        0,
-        3,
-        2,
+        10,
+        6,
+        5,
         2,
         0,
         null
