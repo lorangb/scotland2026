@@ -4,10 +4,10 @@
     "tagline": "7 Days. 6 Courses. 11 Players. Organized by Chris Sewell.",
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
-    "status": "FINAL ROUND - Championship Day at Dumbarnie",
+    "status": "CHAMPIONSHIP COMPLETE",
     "currentRound": 6,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-31T10:15:00+01:00"
+    "lastUpdated": "2026-07-31T18:00:00+01:00"
   },
   "players": [
     {
@@ -324,7 +324,7 @@
     {
       "day": "Friday July 31",
       "event": "Final Round \u2014 Dumbarnie Links",
-      "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship concludes. Post-round: darts at The Criterion, karaoke at Molly Malones late night. Trophy presentation at Dunvegan.",
+      "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship complete. Post-round: darts at The Criterion, karaoke at Molly Malones late night. Trophy presentation at Dunvegan.",
       "type": "golf"
     },
     {
@@ -337,80 +337,80 @@
   "leaderboard": [
     {
       "playerId": "jeff",
-      "skins": 76,
-      "bonus": 30,
-      "total": 106,
-      "note": "R5: 30+LD. Bonus: 14+5+1+1+9=30"
-    },
-    {
-      "playerId": "ronny",
-      "skins": 75,
-      "bonus": 28,
-      "total": 103,
-      "note": "R5: 11 skins. Old Course solo 7.29 (10 pts). Bonus: 10+6+5+2+5=28"
-    },
-    {
-      "playerId": "graham",
-      "skins": 72,
-      "bonus": 23,
-      "total": 95,
-      "note": "Old Course solo 7.29 (10 pts). Bonus: 10+6+2+0+5=23"
-    },
-    {
-      "playerId": "sewell",
-      "skins": 68,
-      "bonus": 25,
-      "total": 93,
-      "note": "R5 bonus: 15 pts. Bonus: 4+1+2+3+15=25"
-    },
-    {
-      "playerId": "brent",
-      "skins": 68,
-      "bonus": 21,
-      "total": 89,
-      "note": "R3: 29 skins. Bonus: 12+3+5+0+1=21"
+      "skins": 95,
+      "bonus": 31,
+      "total": 126,
+      "note": "CHAMPION. R6: 19+LD. Final: 95 skins + 31 bonus = 126"
     },
     {
       "playerId": "adriaan",
-      "skins": 61,
-      "bonus": 27,
-      "total": 88,
-      "note": "Old Course 7.27 + Kingsbarn 7.30 (20 pts). Bonus: 10+0+2+15+0=27"
-    },
-    {
-      "playerId": "chad",
-      "skins": 61,
-      "bonus": 26,
-      "total": 87,
-      "note": "Old Course solo 7.30 (10 pts). Bonus: 17+1+3+5+0=26"
+      "skins": 89,
+      "bonus": 31,
+      "total": 120,
+      "note": "Runner-up. R6: 28+3birdies+Japan. Old Course+Kingsbarn solo (20 pts). Final: 89+31=120"
     },
     {
       "playerId": "bart",
-      "skins": 73,
-      "bonus": 12,
-      "total": 85,
-      "note": "R3: 29 skins. Bonus: 1+3+5+3+0=12"
-    },
-    {
-      "playerId": "brad",
-      "skins": 58,
-      "bonus": 22,
-      "total": 80,
-      "note": "Bonus: 12+5+5+0+0=22"
-    },
-    {
-      "playerId": "zach",
-      "skins": 53,
+      "skins": 101,
       "bonus": 16,
-      "total": 69,
-      "note": "Bonus: 7+2+3+4+0=16"
+      "total": 117,
+      "note": "Co-3rd. R6: 28+3birdies+Japan. Final: 101+16=117"
+    },
+    {
+      "playerId": "ronny",
+      "skins": 86,
+      "bonus": 31,
+      "total": 117,
+      "note": "Co-3rd. R6: 11+birdie+LD+Japan. Old Course solo (10 pts). Final: 86+31=117"
+    },
+    {
+      "playerId": "graham",
+      "skins": 92,
+      "bonus": 24,
+      "total": 116,
+      "note": "5th. R6: 20+birdie. Old Course solo (10 pts). Final: 92+24=116"
     },
     {
       "playerId": "ken",
-      "skins": 47,
-      "bonus": 10,
-      "total": 57,
-      "note": "Bonus: 4+1+3+2+0=10"
+      "skins": 80,
+      "bonus": 32,
+      "total": 112,
+      "note": "6th. R6: 33+eagle chip-in (20)+2LDs. Final: 80+32=112"
+    },
+    {
+      "playerId": "brent",
+      "skins": 87,
+      "bonus": 22,
+      "total": 109,
+      "note": "7th. R6: 19+LD. Final: 87+22=109"
+    },
+    {
+      "playerId": "chad",
+      "skins": 72,
+      "bonus": 29,
+      "total": 101,
+      "note": "8th. R6: 11+birdie+LD+Japan. Old Course solo (10 pts). Final: 72+29=101"
+    },
+    {
+      "playerId": "sewell",
+      "skins": 74,
+      "bonus": 25,
+      "total": 99,
+      "note": "9th. The man who made it happen. Final: 74+25=99"
+    },
+    {
+      "playerId": "zach",
+      "skins": 73,
+      "bonus": 17,
+      "total": 90,
+      "note": "10th. R6: 20+birdie. Final: 73+17=90"
+    },
+    {
+      "playerId": "brad",
+      "skins": 64,
+      "bonus": 22,
+      "total": 86,
+      "note": "11th. Final: 64+22=86"
     }
   ],
   "skinsBreakdown": [
@@ -422,7 +422,7 @@
         29,
         17,
         11,
-        null
+        28
       ]
     },
     {
@@ -433,7 +433,7 @@
         13,
         17,
         23,
-        null
+        6
       ]
     },
     {
@@ -444,7 +444,7 @@
         10,
         6,
         10,
-        null
+        33
       ]
     },
     {
@@ -455,7 +455,7 @@
         29,
         11,
         6,
-        null
+        19
       ]
     },
     {
@@ -466,7 +466,7 @@
         10,
         18,
         10,
-        null
+        20
       ]
     },
     {
@@ -477,7 +477,7 @@
         11,
         5,
         30,
-        null
+        19
       ]
     },
     {
@@ -488,7 +488,7 @@
         15,
         11,
         6,
-        null
+        6
       ]
     },
     {
@@ -499,7 +499,7 @@
         13,
         11,
         10,
-        null
+        11
       ]
     },
     {
@@ -510,7 +510,7 @@
         6,
         10,
         23,
-        null
+        20
       ]
     },
     {
@@ -521,7 +521,7 @@
         13,
         20,
         10,
-        null
+        28
       ]
     },
     {
@@ -532,7 +532,7 @@
         15,
         16,
         11,
-        null
+        11
       ]
     }
   ],
@@ -545,7 +545,7 @@
         5,
         3,
         0,
-        null
+        4
       ]
     },
     {
@@ -556,7 +556,7 @@
         2,
         3,
         15,
-        null
+        0
       ]
     },
     {
@@ -567,7 +567,7 @@
         3,
         2,
         0,
-        null
+        22
       ]
     },
     {
@@ -578,7 +578,7 @@
         5,
         0,
         1,
-        null
+        1
       ]
     },
     {
@@ -589,7 +589,7 @@
         3,
         4,
         0,
-        null
+        1
       ]
     },
     {
@@ -600,7 +600,7 @@
         1,
         1,
         9,
-        null
+        1
       ]
     },
     {
@@ -611,7 +611,7 @@
         5,
         0,
         0,
-        null
+        0
       ]
     },
     {
@@ -622,7 +622,7 @@
         3,
         5,
         0,
-        null
+        3
       ]
     },
     {
@@ -633,7 +633,7 @@
         2,
         0,
         5,
-        null
+        1
       ]
     },
     {
@@ -644,7 +644,7 @@
         2,
         15,
         0,
-        null
+        4
       ]
     },
     {
@@ -655,7 +655,7 @@
         5,
         2,
         5,
-        null
+        3
       ]
     }
   ],

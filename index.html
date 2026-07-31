@@ -843,7 +843,7 @@ footer i { color: var(--gold); }
 <section class="hero" id="top">
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
-    <div class="hero-badge"><i class="fas fa-circle" style="color:#2ECC71;font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> FINAL ROUND — Championship Day at Dumbarnie</div>
+    <div class="hero-badge"><i class="fas fa-trophy" style="color:var(--gold);font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> CHAMPIONSHIP COMPLETE — Jeff Karges Wins!</div>
     <h1>LIST GOLF</h1>
     <h2>Scotland 2026 Championship</h2>
     <div class="hero-meta">
@@ -876,15 +876,15 @@ footer i { color: var(--gold); }
   <div class="section-header">
     <h2>Championship Leaderboard</h2>
     <div class="section-divider"></div>
-    <p>Standings after Round 5 (Aberdour). Final round at Dumbarnie today. Darts at The Criterion, karaoke at Molly Malones after.</p>
+    <p>Final standings after all 6 rounds. Jeff Karges wins the 2026 LIST Golf Scotland Championship with 126 points. Adriaan Zimmerman runner-up at 120. Darts at The Criterion, karaoke at Molly Malones.</p>
   </div>
 
   <div class="live-bar" id="liveBar">
     <div class="live-bar-left">
       <div class="live-dot"></div>
       <div>
-        <h3>Final Round — Dumbarnie Links</h3>
-        <div class="status-text" id="statusText">Tee times 13:50/14:00/14:10 · Championship Day · Loading weather...</div>
+        <h3>Championship Complete — Dumbarnie Links</h3>
+        <div class="status-text" id="statusText">Championship complete! Jeff Karges wins with 126 points. Trophy presentation at Dunvegan.</div>
       </div>
     </div>
     <div>
@@ -1285,7 +1285,7 @@ async function loadWeather() {
     // Update status with wind
     const st = document.getElementById('statusText');
     if (st) {
-      st.textContent = `Tee times 13:50/14:00/14:10 · Championship Day · ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
+      st.textContent = `Championship complete! Jeff Karges wins with 126 points. ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
     }
   } catch(e) {
     w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
