@@ -4,10 +4,10 @@
     "tagline": "7 Days. 6 Courses. 11 Players. Organized by Chris Sewell.",
     "dates": "July 26 - August 1, 2026",
     "location": "St Andrews & The Kingdom of Fife, Scotland",
-    "status": "LIVE - Final Round Today",
+    "status": "FINAL ROUND - Championship Day at Dumbarnie",
     "currentRound": 6,
     "totalRounds": 6,
-    "lastUpdated": "2026-07-31T09:00:00+01:00"
+    "lastUpdated": "2026-07-31T10:00:00+01:00"
   },
   "players": [
     {
@@ -324,7 +324,7 @@
     {
       "day": "Friday July 31",
       "event": "Final Round \u2014 Dumbarnie Links",
-      "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship concludes.",
+      "detail": "Tee times 13:50/14:00/14:10. Pickup 12:30 PM. Championship concludes. Post-round: darts at The Criterion, karaoke at Molly Malones late night. Trophy presentation at Dunvegan.",
       "type": "golf"
     },
     {
@@ -338,16 +338,16 @@
     {
       "playerId": "jeff",
       "skins": 76,
-      "bonus": 25,
-      "total": 101,
-      "note": "R5: 30+LD. Bonus: 14+5+1+1+4=25"
+      "bonus": 30,
+      "total": 106,
+      "note": "R5: 30+LD. Bonus: 14+5+1+1+9=30"
     },
     {
       "playerId": "ronny",
       "skins": 75,
-      "bonus": 23,
-      "total": 98,
-      "note": "R5: 11 skins. Old Course solo 7.29 (10 pts)"
+      "bonus": 28,
+      "total": 103,
+      "note": "R5: 11 skins. Old Course solo 7.29 (10 pts). Bonus: 10+6+5+2+5=28"
     },
     {
       "playerId": "graham",
@@ -355,6 +355,13 @@
       "bonus": 23,
       "total": 95,
       "note": "Old Course solo 7.29 (10 pts). Bonus: 10+6+2+0+5=23"
+    },
+    {
+      "playerId": "sewell",
+      "skins": 68,
+      "bonus": 25,
+      "total": 93,
+      "note": "R5 bonus: 15 pts. Bonus: 4+1+2+3+15=25"
     },
     {
       "playerId": "brent",
@@ -383,13 +390,6 @@
       "bonus": 12,
       "total": 85,
       "note": "R3: 29 skins. Bonus: 1+3+5+3+0=12"
-    },
-    {
-      "playerId": "sewell",
-      "skins": 68,
-      "bonus": 15,
-      "total": 83,
-      "note": "Bonus: 4+1+2+3+5=15"
     },
     {
       "playerId": "brad",
@@ -555,7 +555,7 @@
         1,
         2,
         3,
-        5,
+        15,
         null
       ]
     },
@@ -599,7 +599,7 @@
         5,
         1,
         1,
-        4,
+        9,
         null
       ]
     },
@@ -654,7 +654,7 @@
         6,
         5,
         2,
-        0,
+        5,
         null
       ]
     }
@@ -846,8 +846,8 @@
     },
     {
       "name": "The Criterion 'The Crit'",
-      "vibe": "Old-school St Andrews pub. No frills, great beer, proper locals' spot.",
-      "specialty": "Traditional ales and a warm fire"
+      "vibe": "Old-school St Andrews pub. No frills, great beer, proper locals' spot. Darts board in the back room.",
+      "specialty": "Traditional ales, a warm fire, and the darts board"
     },
     {
       "name": "Whey Pat Tavern",
