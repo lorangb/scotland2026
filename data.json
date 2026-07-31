@@ -343,32 +343,32 @@
       "note": "CHAMPION. R6: 19+LD. Final: 95 skins + 31 bonus = 126"
     },
     {
+      "playerId": "graham",
+      "skins": 92,
+      "bonus": 29,
+      "total": 121,
+      "note": "RUNNER-UP. Won 5-point Pro Shop bet from Brent (ZPS spent £500+). R6: 20+birdie. Old Course solo (10 pts). Final: 92+29=121"
+    },
+    {
       "playerId": "adriaan",
       "skins": 89,
       "bonus": 31,
       "total": 120,
-      "note": "Runner-up. R6: 28+3birdies+Japan. Old Course+Kingsbarn solo (20 pts). Final: 89+31=120"
+      "note": "3rd. R6: 28+3birdies+Japan. Old Course+Kingsbarn solo (20 pts). Final: 89+31=120"
     },
     {
       "playerId": "bart",
       "skins": 101,
       "bonus": 16,
       "total": 117,
-      "note": "Co-3rd. R6: 28+3birdies+Japan. Final: 101+16=117"
+      "note": "T-4th. R6: 28+3birdies+Japan. Final: 101+16=117"
     },
     {
       "playerId": "ronny",
       "skins": 86,
       "bonus": 31,
       "total": 117,
-      "note": "Co-3rd. R6: 11+birdie+LD+Japan. Old Course solo (10 pts). Final: 86+31=117"
-    },
-    {
-      "playerId": "graham",
-      "skins": 92,
-      "bonus": 24,
-      "total": 116,
-      "note": "5th. R6: 20+birdie. Old Course solo (10 pts). Final: 92+24=116"
+      "note": "T-4th. R6: 11+birdie+LD+Japan. Old Course solo (10 pts). Final: 86+31=117"
     },
     {
       "playerId": "ken",
@@ -380,9 +380,9 @@
     {
       "playerId": "brent",
       "skins": 87,
-      "bonus": 22,
-      "total": 109,
-      "note": "7th. R6: 19+LD. Final: 87+22=109"
+      "bonus": 17,
+      "total": 104,
+      "note": "7th. Lost 5-point Pro Shop bet to Graham (ZPS spent £500+). R6: 19+LD. Final: 87+17=104"
     },
     {
       "playerId": "chad",
@@ -578,7 +578,7 @@
         5,
         0,
         1,
-        1
+        -4
       ]
     },
     {
@@ -633,7 +633,7 @@
         2,
         0,
         5,
-        1
+        6
       ]
     },
     {

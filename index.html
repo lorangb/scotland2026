@@ -843,7 +843,7 @@ footer i { color: var(--gold); }
 <section class="hero" id="top">
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
-    <div class="hero-badge"><i class="fas fa-trophy" style="color:var(--gold);font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> CHAMPIONSHIP COMPLETE — Jeff Karges Wins!</div>
+    <div class="hero-badge"><i class="fas fa-trophy" style="color:var(--gold);font-size:0.5rem;vertical-align:middle;margin-right:0.4rem;"></i> CHAMPIONSHIP COMPLETE — Jeff Karges Wins! Graham Johnson 2nd</div>
     <h1>LIST GOLF</h1>
     <h2>Scotland 2026 Championship</h2>
     <div class="hero-meta">
@@ -876,7 +876,7 @@ footer i { color: var(--gold); }
   <div class="section-header">
     <h2>Championship Leaderboard</h2>
     <div class="section-divider"></div>
-    <p>Final standings after all 6 rounds. Jeff Karges wins the 2026 LIST Golf Scotland Championship with 126 points. Adriaan Zimmerman runner-up at 120. Darts at The Criterion, karaoke at Molly Malones.</p>
+    <p>Final standings after all 6 rounds. Jeff Karges wins the 2026 LIST Golf Scotland Championship with 126 points. Graham Johnson takes 2nd after winning a 5-point Pro Shop bet from Brent (ZPS spent £500+). Darts at The Criterion, karaoke at Molly Malones.</p>
   </div>
 
   <div class="live-bar" id="liveBar">
@@ -884,7 +884,7 @@ footer i { color: var(--gold); }
       <div class="live-dot"></div>
       <div>
         <h3>Championship Complete — Dumbarnie Links</h3>
-        <div class="status-text" id="statusText">Championship complete! Jeff Karges wins with 126 points. Trophy presentation at Dunvegan.</div>
+        <div class="status-text" id="statusText">Championship complete! Jeff Karges wins with 126. Graham Johnson runner-up at 121 after winning Pro Shop bet.</div>
       </div>
     </div>
     <div>
@@ -1285,7 +1285,7 @@ async function loadWeather() {
     // Update status with wind
     const st = document.getElementById('statusText');
     if (st) {
-      st.textContent = `Championship complete! Jeff Karges wins with 126 points. ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
+      st.textContent = `Championship complete! Jeff Karges wins with 126. Graham Johnson runner-up 121 after Pro Shop bet. ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
     }
   } catch(e) {
     w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
