@@ -883,8 +883,8 @@ footer i { color: var(--gold); }
     <div class="live-bar-left">
       <div class="live-dot"></div>
       <div>
-        <h3>Round 5 — Aberdour Golf Club</h3>
-        <div class="status-text" id="statusText">Tee times 13:00 · Loading weather...</div>
+        <h3>Final Round — Dumbarnie Links</h3>
+        <div class="status-text" id="statusText">Tee times 13:50/14:00/14:10 · Championship Day · Loading weather...</div>
       </div>
     </div>
     <div>
@@ -1285,7 +1285,7 @@ async function loadWeather() {
     // Update status with wind
     const st = document.getElementById('statusText');
     if (st) {
-      st.textContent = `Tee times 13:00 · ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
+      st.textContent = `Tee times 13:50/14:00/14:10 · Championship Day · ${condition}, ${formatTemp(tempC, usingF)}${tempUnit(usingF)}, wind ${wind} mph`;
     }
   } catch(e) {
     w.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-cloud" style="margin-right:0.5rem;color:var(--gold);"></i> Scotland weather unavailable — assume links conditions (wind and character).</div>`;
