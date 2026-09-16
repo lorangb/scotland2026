@@ -1,30 +1,45 @@
-# LIST Golf Scotland 2026 Championship
+# LIST Golf Scotland 2026 Championship Archive
 
-Live scoring and event hub for the LIST Golf Scotland 2026 Championship.
+Official **results archive** for the LIST Golf Scotland 2026 Championship.
 
-**July 26 — August 1, 2026** · St Andrews, Fife, Scotland
+**July 26 — August 1, 2026** · St Andrews & The Kingdom of Fife, Scotland
 
-## Features
+**Champion:** Jeff Karges — **126** pts  
+**Runner-up:** Graham Johnson — **121** pts (Pro Shop bet)
 
-- **Live Leaderboard** — Real-time skins, bonus points, and championship standings
-- **Player Profiles** — 11 contenders with handicaps, GHINs, and bios (no contact info)
-- **Course Profiles** — All 6 courses with descriptions, signature holes, and links
-- **Round-by-Round Schedule** — Pairings, formats, tee times, and transport
-- **Live Weather** — Current conditions from St Andrews via Open-Meteo
-- **Scoring Breakdown** — Detailed skins and bonus points per round
+## Live site
+
+**https://lorangb.github.io/scotland2026/**
+
+> Repo homepage field: set to the Pages URL above via GitHub Settings → General → Homepage (or API).
+
+## What's here
+
+- **Final Standings** — Champion-first hero, full leaderboard (desktop table + mobile cards)
+- **Player Profiles** — 11 contenders with handicaps, GHINs, and bios
+- **Course Profiles** — All 6 Fife courses with descriptions and links
+- **Week Schedule & Pairings** — Round-by-round timeline and groups
+- **Scoring Breakdown** — Skins and bonus points per round
 - **LIST Golf Rules** — Formats, skins, presses, and the Ken Rule
-- **Pub Guide** — Where to find the boys after the round
-- **Logistics** — Airbnb assignments, transport, and what to bring
+- **Pub Guide** — Criterion darts, Molly Malones karaoke, and the rest
+- **Logistics** — Airbnbs, packing list, St Andrews climate widget
 
 ## Tech
 
-- Pure HTML/CSS/JS static site
-- Dark Scottish links aesthetic (heather purple, thistle green, whisky gold)
-- Open-Meteo free weather API (no key required)
-- Google Fonts (Cinzel + Inter)
-- Font Awesome icons
-- Mobile-first responsive
+- Static HTML/CSS/JS (GitHub Pages, no build step)
+- Dark Scottish links palette (heather purple, thistle green, whisky gold)
+- Data from `data.json` (do not invent scores)
+- Google Fonts (Cinzel + Inter) · Font Awesome · Open-Meteo climate API
+- Relative image paths (`images/…`) as in this repo
 
-## Deployment
+## Local preview
 
-Hosted on GitHub Pages. Data updates are done by editing `data.json` after each round.
+```bash
+cd scotland2026
+python3 -m http.server 8080
+# open http://localhost:8080
+```
+
+## Updating results
+
+Edit `data.json` only when correcting archive data. Scores and player results must stay exact.
